@@ -1,11 +1,9 @@
 package IMS.demo.form;
 
-import IMS.demo.dto.TradeGoodsDTO;
 import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 public class PurchaseForm {

@@ -17,6 +17,10 @@ public class BuyerDTO {
         note = buyerInfoPO.getComments();
     }
 
+    public BuyerDTO() {
+
+    }
+
     public BuyerInfoPO getPO() {
         BuyerInfoPO buyerInfoPO = new BuyerInfoPO();
         buyerInfoPO.setComments(note);

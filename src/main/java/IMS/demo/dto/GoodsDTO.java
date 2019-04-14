@@ -30,6 +30,10 @@ public class GoodsDTO {
         price = productInfoPO.getProductPrice().doubleValue();
     }
 
+    public GoodsDTO() {
+
+    }
+
     public ProductInfoPO getPo() {
         ProductInfoPO productInfoPO = new ProductInfoPO();
         productInfoPO.setProductModel(category);

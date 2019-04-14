@@ -1,8 +1,7 @@
 package IMS.demo.dto;
 
+import IMS.demo.dataobject.CustomerPO;
 import lombok.Data;
-
-import java.math.BigDecimal;
 
 @Data
 public class MemberDTO {
@@ -10,25 +9,27 @@ public class MemberDTO {
     private String memberName;
     private String tel;
     private String note;
-    private double price;
+    private double balance;
 
-    public void setNote(String note) {
-        this.note = note;
+    public MemberDTO() {
+
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public MemberDTO(CustomerPO customerPO) {
+        memberId = customerPO.getCardNo();
+        memberName = customerPO.getCustomerName();
+        tel = customerPO.getContact();
+        note = customerPO.getComments();
+        balance= customerPO.getBalance();
     }
 
-    public void setMemberId(String memberId) {
-        this.memberId = memberId;
-    }
-
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
+    public CustomerPO getPO() {
+        CustomerPO customerPO = new CustomerPO();
+        customerPO.setBalance(balance);
+        customerPO.setCardNo(memberId);
+        customerPO.setCustomerName(memberName);
+        customerPO.setContact(tel);
+        customerPO.setContact(note);
+        return customerPO;
     }
 }

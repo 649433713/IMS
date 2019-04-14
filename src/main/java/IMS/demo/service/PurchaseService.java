@@ -10,5 +10,5 @@ public interface PurchaseService {
     PurchaseDTO purchase(PurchaseDTO purchaseDTO);
 
     /**查询进货列表*/
-    Page<Package> findPurchaseList(Pageable pageable);
+    Page<PurchaseDTO> findPurchaseList(Pageable pageable);
 }

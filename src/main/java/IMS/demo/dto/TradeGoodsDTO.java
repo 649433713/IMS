@@ -2,6 +2,7 @@ package IMS.demo.dto;
 
 import IMS.demo.dataobject.OrderDetailPO;
 import IMS.demo.dataobject.OrderMasterPO;
+import IMS.demo.dataobject.StockPurchasePO;
 import lombok.Data;
 
 @Data
@@ -24,7 +25,25 @@ public class TradeGoodsDTO {
         note = orderMasterPO.getOrderAbstract();
     }
 
-    public TradeGoodsDTO(PurchaseDTO purchaseDTO) {
+    public TradeGoodsDTO(StockPurchasePO stockPurchasePO) {
+        goodsId = stockPurchasePO.getProductId();
+        num = stockPurchasePO.getQuantity();
+        price = stockPurchasePO.getUnitPrice();
+        priceSum = stockPurchasePO.getAmount();
+        tax = stockPurchasePO.getTax();
+        buyer = stockPurchasePO.getSeller();
+        note = stockPurchasePO.getComments();
+    }
 
+    public StockPurchasePO getPO() {
+        StockPurchasePO stockPurchasePO = new StockPurchasePO();
+        stockPurchasePO.setAmount(priceSum);
+        stockPurchasePO.setComments(note);
+        stockPurchasePO.setProductId(goodsId);
+        stockPurchasePO.setUnitPrice(price);
+        stockPurchasePO.setQuantity(num);
+        stockPurchasePO.setSeller(buyer);
+        stockPurchasePO.setTax(tax);
+        return stockPurchasePO;
     }
 }

@@ -1,6 +1,7 @@
 package IMS.demo.dataobject;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Objects;
 @Table(name = "stock_purchase_master", schema = "ims")
 public class StockPurchaseMasterPO {
     private int id;
-    private String createTime;
+    private LocalDateTime createTime;
     private String comments;
     private String seller;
 
@@ -28,11 +29,11 @@ public class StockPurchaseMasterPO {
 
     @Basic
     @Column(name = "create_time", nullable = true, length = 45)
-    public String getCreateTime() {
+    public LocalDateTime getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(String createTime) {
+    public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
 

@@ -18,6 +18,7 @@ public class StockPurchasePO {
     private Double tax;
     private String comments;
     private int masterId;
+    private String seller;
 
     @Id()
     @Column(name = "id", nullable = false)
@@ -108,6 +109,16 @@ public class StockPurchasePO {
 
     public void setMasterId(int masterId) {
         this.masterId = masterId;
+    }
+
+    @Basic
+    @Column(name = "seller", nullable = true, length = 45)
+    public String getSeller() {
+        return seller;
+    }
+
+    public void setSeller(String seller) {
+        this.seller = seller;
     }
 
     @Override
