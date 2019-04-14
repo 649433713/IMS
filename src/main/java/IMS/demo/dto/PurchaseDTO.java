@@ -11,4 +11,20 @@ public class PurchaseDTO {
     private String note;
     private LocalDateTime createTime;
     List<TradeGoodsDTO> goodsList;
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
+    }
+
+    public void setGoodsList(List<TradeGoodsDTO> goodsList) {
+        this.goodsList = goodsList;
+    }
+
+    public void setPurchaseId(String purchaseId) {
+        this.purchaseId = purchaseId;
+    }
 }
