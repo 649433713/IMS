@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `ims` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ims`;
--- MySQL dump 10.13  Distrib 5.7.16, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ims
 -- ------------------------------------------------------
--- Server version	5.7.16-log
+-- Server version	5.7.18
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -50,7 +50,7 @@ CREATE TABLE `buyer_info` (
   `id` varchar(32) NOT NULL,
   `name` varchar(32) NOT NULL,
   `contact` varchar(32) NOT NULL,
-  `comments` varchar(64),
+  `comments` varchar(64) DEFAULT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`id`)
@@ -63,6 +63,7 @@ CREATE TABLE `buyer_info` (
 
 LOCK TABLES `buyer_info` WRITE;
 /*!40000 ALTER TABLE `buyer_info` DISABLE KEYS */;
+INSERT INTO `buyer_info` VALUES ('124343','yinywf','15996262601',NULL,'2019-04-13 17:20:01','2019-04-13 17:20:01');
 /*!40000 ALTER TABLE `buyer_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -260,8 +261,10 @@ CREATE TABLE `stock_purchase` (
   `amount` double DEFAULT NULL,
   `tax` double DEFAULT NULL,
   `comments` varchar(512) DEFAULT NULL,
+  `master_id` int(11) NOT NULL,
+  `seller` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -270,12 +273,35 @@ CREATE TABLE `stock_purchase` (
 
 LOCK TABLES `stock_purchase` WRITE;
 /*!40000 ALTER TABLE `stock_purchase` DISABLE KEYS */;
+INSERT INTO `stock_purchase` VALUES (1,'1231',NULL,2,20,0,5,'test2',1,'wf'),(2,NULL,NULL,NULL,0,0,0,NULL,1,NULL),(3,'123',NULL,2,20,0,5,'test1',2,'wf'),(4,'1231',NULL,2,20,0,5,'test2',2,'wf');
 /*!40000 ALTER TABLE `stock_purchase` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'ims'
+-- Table structure for table `stock_purchase_master`
 --
+
+DROP TABLE IF EXISTS `stock_purchase_master`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stock_purchase_master` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `comments` varchar(512) DEFAULT NULL,
+  `seller` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `stock_purchase_master`
+--
+
+LOCK TABLES `stock_purchase_master` WRITE;
+/*!40000 ALTER TABLE `stock_purchase_master` DISABLE KEYS */;
+INSERT INTO `stock_purchase_master` VALUES (1,NULL,'test',NULL),(2,'2019-04-14 07:48:53','test2',NULL);
+/*!40000 ALTER TABLE `stock_purchase_master` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Dumping routines for database 'ims'
@@ -290,4 +316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-14  1:00:11
+-- Dump completed on 2019-04-14 15:51:47
