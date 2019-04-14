@@ -4,8 +4,8 @@ import lombok.Getter;
 import IMS.demo.enums.ResultEnum;
 
 /**
- * @author IMS
- * Created on 2017/10/15
+ * @author yinywf
+ * Created on 2019/04/12
  */
 @Getter
 public class SellException extends RuntimeException{

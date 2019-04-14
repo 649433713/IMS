@@ -5,7 +5,7 @@ import IMS.demo.service.MemberService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author yinywf
@@ -33,7 +33,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public ArrayList<String> findMemberNames() {
+    public List<String> findMemberNames() {
         return null;
     }
 }

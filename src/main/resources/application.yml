@@ -3,8 +3,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/IMS?serverTimezone=GMT%2b8&characterEncoding=utf8&useUnicode=true&useSSL=false
-    username: admin
-    password: admin
+    username: root
+    password: root
   jpa:
     hibernate:
       ddl-auto: update
@@ -18,9 +18,9 @@ server:
   context-path: /IMS
 
 
-#logging:
-#  pattern:
-#    console: "%d - %msg%n"
-#  file: sell.log
-#
+logging:
+  pattern:
+    console: "%d - %msg%n"
+  file: ims.log
+
 

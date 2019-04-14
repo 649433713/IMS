@@ -8,7 +8,7 @@ import java.sql.Timestamp;
  * Created on 2019/4/10
  */
 @Entity
-@Table(name = "product_category", schema = "ims", catalog = "")
+@Table(name = "product_category", schema = "ims")
 public class ProductCategoryPO {
     private int categoryId;
     private String categoryName;

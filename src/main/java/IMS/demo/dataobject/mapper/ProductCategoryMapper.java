@@ -1,10 +1,10 @@
 package IMS.demo.dataobject.mapper;
 
+import IMS.demo.dataobject.ProductCategoryPO;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-import IMS.demo.dataobject.ProductCategory;
 
 import java.util.Map;
 
@@ -18,12 +18,12 @@ public interface ProductCategoryMapper {
     int insertByMap(Map<String, Object> map);
 
     @Insert("insert into product_category(category_name,category_type) values(#{categoryName,jdbcType=VARCHAR},#{categoryType,jdbcType=INTEGER")
-    int insertByObject(ProductCategory productCategory);
+    int insertByObject(ProductCategoryPO productCategory);
 
     @Select("select * from product_category where category_type = #{categoryType}")
     @Results({
             @Result(column = "category_id",property = "categoryId")
     })
-    ProductCategory findByCategoryType(Integer categoryType);
+    ProductCategoryPO findByCategoryType(Integer categoryType);
 
 }

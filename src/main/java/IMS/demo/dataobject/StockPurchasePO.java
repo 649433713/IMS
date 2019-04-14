@@ -7,7 +7,7 @@ import javax.persistence.*;
  * Created on 2019/4/10
  */
 @Entity
-@Table(name = "stock_purchase", schema = "ims", catalog = "")
+@Table(name = "stock_purchase", schema = "ims")
 public class StockPurchasePO {
     private int id;
     private String productId;
@@ -17,9 +17,11 @@ public class StockPurchasePO {
     private Double amount;
     private Double tax;
     private String comments;
+    private int masterId;
 
-    @Id
+    @Id()
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -96,6 +98,16 @@ public class StockPurchasePO {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    @Basic
+    @Column(name = "master_id", nullable = false)
+    public int getMasterId() {
+        return masterId;
+    }
+
+    public void setMasterId(int masterId) {
+        this.masterId = masterId;
     }
 
     @Override

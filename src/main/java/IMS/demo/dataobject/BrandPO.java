@@ -10,8 +10,8 @@ import javax.persistence.Table;
  * Created on 2019/4/11
  */
 @Entity
-@Table(name = "brand_list", schema = "ims", catalog = "")
-public class BrandListPO {
+@Table(name = "brand_list", schema = "ims")
+public class BrandPO {
     private String brand;
 
     @Id
@@ -29,7 +29,7 @@ public class BrandListPO {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        BrandListPO that = (BrandListPO) o;
+        BrandPO that = (BrandPO) o;
 
         if (brand != null ? !brand.equals(that.brand) : that.brand != null) return false;
 

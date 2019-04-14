@@ -1,15 +1,15 @@
 package IMS.demo.dto;
 
+import IMS.demo.dataobject.OrderDetailPO;
 import lombok.Data;
-import IMS.demo.dataobject.OrderDetail;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * @author IMS
- * Created on 2017/10/15
+ * @author yinywf
+ * Created on 2019/04/12
  */
 @Data
 //@JsonInclude(JsonInclude.Include.NON_NULL)
@@ -26,6 +26,6 @@ public class OrderDTO{
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
 
-    List<OrderDetail> orderDetailList;
+    List<OrderDetailPO> orderDetailPOList;
 
 }

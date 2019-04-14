@@ -3,7 +3,7 @@ package IMS.demo.service;
 import IMS.demo.dto.MemberDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.ArrayList;
+import java.util.List;
 
 public interface MemberService {
     /**获取用户列表*/
@@ -19,5 +19,5 @@ public interface MemberService {
     MemberDTO del(MemberDTO memberDTO);
 
     /**获取所有用户名称*/
-    ArrayList<String> findMemberNames();
+    List<String> findMemberNames();
 }

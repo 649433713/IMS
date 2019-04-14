@@ -1,6 +1,5 @@
 package IMS.demo.dto;
 
-import IMS.demo.dataobject.OrderDetail;
 import lombok.Data;
 
 import java.time.LocalDateTime;

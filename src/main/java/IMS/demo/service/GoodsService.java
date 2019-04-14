@@ -4,7 +4,7 @@ import IMS.demo.dto.GoodsDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface GoodsService {
     /**查询商品列表*/
@@ -20,12 +20,12 @@ public interface GoodsService {
     GoodsDTO del(GoodsDTO goodsDTO);
 
     /**获取所有商品品牌*/
-    ArrayList<String> findAllBrands();
+    List<String> findAllBrands();
 
     /**获取所有商品名*/
-    ArrayList<String> findAllNames();
+    List<String> findAllNames();
 
     /**获取所有商品种类*/
-    ArrayList<String> findAllCategory();
+    List<String> findAllCategory();
 
 }

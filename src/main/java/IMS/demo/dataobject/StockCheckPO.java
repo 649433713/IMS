@@ -8,7 +8,7 @@ import java.sql.Timestamp;
  * Created on 2019/4/10
  */
 @Entity
-@Table(name = "stock_check", schema = "ims", catalog = "")
+@Table(name = "stock_check", schema = "ims")
 @IdClass(StockCheckPOPK.class)
 public class StockCheckPO {
     private String productId;

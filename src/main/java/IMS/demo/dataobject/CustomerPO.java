@@ -7,7 +7,7 @@ import javax.persistence.*;
  * Created on 2019/4/10
  */
 @Entity
-@Table(name = "customer", schema = "ims", catalog = "")
+@Table(name = "customer", schema = "ims")
 public class CustomerPO {
     private String cardNo;
     private String customerName;

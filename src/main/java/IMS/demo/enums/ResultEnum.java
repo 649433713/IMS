@@ -3,8 +3,8 @@ package IMS.demo.enums;
 import lombok.Getter;
 
 /**
- * @author IMS
- * Created on 2017/10/15
+ * @author yinywf
+ * Created on 2019/04/12
  */
 @Getter
 public enum ResultEnum {
