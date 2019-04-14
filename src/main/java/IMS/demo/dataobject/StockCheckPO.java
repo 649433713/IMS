@@ -1,5 +1,8 @@
 package IMS.demo.dataobject;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -10,6 +13,8 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "stock_check", schema = "ims")
 @IdClass(StockCheckPOPK.class)
+@DynamicUpdate
+@DynamicInsert
 public class StockCheckPO {
     private String productId;
     private Integer adjustQuantity;

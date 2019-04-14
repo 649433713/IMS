@@ -46,4 +46,8 @@ public class TradeGoodsDTO {
         stockPurchasePO.setTax(tax);
         return stockPurchasePO;
     }
+
+    public TradeGoodsDTO() {
+
+    }
 }

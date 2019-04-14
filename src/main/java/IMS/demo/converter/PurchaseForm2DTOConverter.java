@@ -6,7 +6,6 @@ import IMS.demo.enums.ResultEnum;
 import IMS.demo.exceptions.SellException;
 import IMS.demo.form.PurchaseForm;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class PurchaseForm2DTOConverter {
         List<TradeGoodsDTO> tradeGoodsDTOList;
         Gson gson = new Gson();
         try {
-            tradeGoodsDTOList = gson.fromJson(purchaseForm.getItems(),new TypeToken<List<TradeGoodsDTO>>(){}.getType());
+//            tradeGoodsDTOList = gson.fromJson(purchaseForm.getItems(),new TypeToken<List<TradeGoodsDTO>>(){}.getType());
 
         }catch (Exception e){
             throw new SellException(ResultEnum.PARAM_ERROR);

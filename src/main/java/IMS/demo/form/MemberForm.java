@@ -8,10 +8,10 @@ public class MemberForm {
     private String memberName;
     private String tel;
     private String note;
-    private double price;
+    private double balance;
 
-    public double getPrice() {
-        return price;
+    public double getBalance() {
+        return balance;
     }
 
     public String getNote() {

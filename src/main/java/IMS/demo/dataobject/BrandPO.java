@@ -1,5 +1,8 @@
 package IMS.demo.dataobject;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,6 +14,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "brand_list", schema = "ims")
+@DynamicUpdate
+@DynamicInsert
 public class BrandPO {
     private String brand;
 

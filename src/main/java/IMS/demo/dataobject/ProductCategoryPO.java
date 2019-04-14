@@ -1,5 +1,8 @@
 package IMS.demo.dataobject;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -9,6 +12,8 @@ import java.sql.Timestamp;
  */
 @Entity
 @Table(name = "product_category", schema = "ims")
+@DynamicUpdate
+@DynamicInsert
 public class ProductCategoryPO {
     private int categoryId;
     private String categoryName;

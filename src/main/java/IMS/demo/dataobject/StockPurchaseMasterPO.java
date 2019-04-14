@@ -1,5 +1,8 @@
 package IMS.demo.dataobject;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -10,6 +13,8 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "stock_purchase_master", schema = "ims")
+@DynamicUpdate
+@DynamicInsert
 public class StockPurchaseMasterPO {
     private int id;
     private LocalDateTime createTime;

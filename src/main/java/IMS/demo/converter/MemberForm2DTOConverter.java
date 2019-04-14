@@ -1,8 +1,6 @@
 package IMS.demo.converter;
 
-import IMS.demo.dto.GoodsDTO;
 import IMS.demo.dto.MemberDTO;
-import IMS.demo.form.GoodsForm;
 import IMS.demo.form.MemberForm;
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,7 +11,7 @@ public class MemberForm2DTOConverter {
         memberDTO.setMemberId(memberForm.getMemberId());
         memberDTO.setMemberName(memberForm.getMemberName());
         memberDTO.setNote(memberForm.getNote());
-        memberDTO.setPrice(memberForm.getPrice());
+        memberDTO.setBalance(memberForm.getBalance());
         memberDTO.setTel(memberForm.getTel());
         return memberDTO;
     }

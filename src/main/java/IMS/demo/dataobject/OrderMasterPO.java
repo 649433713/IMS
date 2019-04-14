@@ -1,5 +1,8 @@
 package IMS.demo.dataobject;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
@@ -10,6 +13,8 @@ import java.sql.Timestamp;
  */
 @Entity
 @Table(name = "order_master", schema = "ims")
+@DynamicUpdate
+@DynamicInsert
 public class OrderMasterPO {
     private String orderId;
     private String buyerName;
