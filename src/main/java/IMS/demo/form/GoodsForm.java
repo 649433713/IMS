@@ -3,6 +3,8 @@ package IMS.demo.form;
 import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import javax.validation.constraints.NotNull;
+
 @Data
 public class GoodsForm {
     private String goodsId;
@@ -16,10 +18,10 @@ public class GoodsForm {
     private String size;
     @NotEmpty(message = "单位必填")
     private String danwei;
-    @NotEmpty(message = "重量必填")
+    @NotNull(message = "重量必填")
     private double weight;
     private String note ;
-    @NotEmpty(message = "价格必填")
+    @NotNull(message = "价格必填")
     private double price;
 
     public String getSize() {

@@ -11,6 +11,13 @@ spring:
     show-sql: true
   jackson:
     default-property-inclusion: non_null
+  mvc:
+    static-path-pattern: /static/**
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
 #  redis:
 #    host: 127.0.0.1
 #    port: 6379
