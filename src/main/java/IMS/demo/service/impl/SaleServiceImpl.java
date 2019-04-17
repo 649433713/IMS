@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Slf4j
 @Transactional(rollbackFor = Exception.class)
-public class SalesServiceImpl implements SalesService {
+public class SaleServiceImpl implements SalesService {
     @Override
     public PurchaseDTO sales(PurchaseDTO purchaseDTO) {
         return null;
