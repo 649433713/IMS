@@ -11,7 +11,11 @@ public class BuyerForm2DTOConverter {
         buyerDTO.setBuyerId(buyForm.getBuyerId());
         buyerDTO.setBuyerName(buyForm.getBuyerName());
         buyerDTO.setNote(buyForm.getNote());
-        buyerDTO.setTel(buyForm.getTel());
+        buyerDTO.setContact(buyForm.getContact());
+        buyerDTO.setContactPerson(buyForm.getContactPerson());
+        buyerDTO.setEmail(buyForm.getEmail());
+        buyerDTO.setLegalPerson(buyForm.getLegalPerson());
+        buyerDTO.setProductionCategory(buyForm.getProductionCategory());
         return buyerDTO;
 
     }

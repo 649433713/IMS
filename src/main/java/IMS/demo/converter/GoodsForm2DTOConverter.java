@@ -17,6 +17,8 @@ public class GoodsForm2DTOConverter {
         goodsDTO.setPrice(goodsForm.getPrice());
         goodsDTO.setSize(goodsForm.getSize());
         goodsDTO.setWeight(goodsForm.getWeight());
+        goodsDTO.setBestBeforeDate(goodsForm.getBestBeforeDate());
+        goodsDTO.setPlaceOfOrigin(goodsForm.getPlaceOfOrigin());
         return goodsDTO;
     }
 
