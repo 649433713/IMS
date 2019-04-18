@@ -5,6 +5,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Objects;
 
 /**
  * @author yinywf
@@ -18,6 +19,7 @@ public class BuyerInfoPO {
     private String id;
     private String name;
     private String contact;
+    private String contactPerson;
     private String comments;
     private Timestamp createTime;
     private Timestamp updateTime;
@@ -85,32 +87,14 @@ public class BuyerInfoPO {
         this.updateTime = updateTime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        BuyerInfoPO that = (BuyerInfoPO) o;
-
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (contact != null ? !contact.equals(that.contact) : that.contact != null) return false;
-        if (comments != null ? !comments.equals(that.comments) : that.comments != null) return false;
-        if (createTime != null ? !createTime.equals(that.createTime) : that.createTime != null) return false;
-        if (updateTime != null ? !updateTime.equals(that.updateTime) : that.updateTime != null) return false;
-
-        return true;
+    @Basic
+    @Column(name = "contact_person", nullable = false)
+    public String getContactPerson() {
+        return contactPerson;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (contact != null ? contact.hashCode() : 0);
-        result = 31 * result + (comments != null ? comments.hashCode() : 0);
-        result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
-        result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
-        return result;
+    public void setContactPerson(String contactPerson) {
+        this.contactPerson = contactPerson;
     }
 
     @Basic
@@ -141,5 +125,28 @@ public class BuyerInfoPO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BuyerInfoPO that = (BuyerInfoPO) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(contact, that.contact) &&
+                Objects.equals(contactPerson, that.contactPerson) &&
+                Objects.equals(comments, that.comments) &&
+                Objects.equals(createTime, that.createTime) &&
+                Objects.equals(updateTime, that.updateTime) &&
+                Objects.equals(productionCategory, that.productionCategory) &&
+                Objects.equals(legalPerson, that.legalPerson) &&
+                Objects.equals(email, that.email);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, name, contact, contactPerson, comments, createTime, updateTime, productionCategory, legalPerson, email);
     }
 }

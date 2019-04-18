@@ -1,10 +1,15 @@
 package IMS.demo.service.impl;
 
-import IMS.demo.dto.PurchaseDTO;
+import IMS.demo.dto.SaleDTO;
+import IMS.demo.dto.TradeGoodsDTO;
 import IMS.demo.service.SalesService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @author yinywf
@@ -14,8 +19,18 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 @Transactional(rollbackFor = Exception.class)
 public class SaleServiceImpl implements SalesService {
+   @Override
+    public SaleDTO sales(SaleDTO SaleDTO) {
+        return null;
+    }
+
     @Override
-    public PurchaseDTO sales(PurchaseDTO purchaseDTO) {
+    public Page<SaleDTO> findSalesList(Pageable pageable) {
+        return null;
+    }
+
+    @Override
+    public List<TradeGoodsDTO> findSaleDetail(String saleID) {
         return null;
     }
 }

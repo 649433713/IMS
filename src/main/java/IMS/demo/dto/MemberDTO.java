@@ -29,7 +29,7 @@ public class MemberDTO {
         customerPO.setCardNo(memberId);
         customerPO.setCustomerName(memberName);
         customerPO.setContact(tel);
-        customerPO.setContact(note);
+        customerPO.setComments(note);
         return customerPO;
     }
 }
