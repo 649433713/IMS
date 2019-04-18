@@ -1,5 +1,7 @@
 package IMS.demo.dataobject;
 
+import IMS.demo.utils.excelUtil.ExcelCell;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -15,8 +17,11 @@ import java.util.Objects;
 @Table(name = "buyer_info", schema = "ims")
 @DynamicUpdate
 @DynamicInsert
+@ToString
 public class BuyerInfoPO {
+    @ExcelCell("编号")
     private String id;
+    @ExcelCell("名称")
     private String name;
     private String contact;
     private String contactPerson;

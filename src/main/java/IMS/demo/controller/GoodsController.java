@@ -1,10 +1,9 @@
 package IMS.demo.controller;
 
 import IMS.demo.converter.GoodsForm2DTOConverter;
-import IMS.demo.converter.OrderForm2OrderDTOConverter;
 import IMS.demo.dto.GoodsDTO;
 import IMS.demo.enums.ResultEnum;
-import IMS.demo.exceptions.SellException;
+import IMS.demo.exceptions.CommonException;
 import IMS.demo.form.GoodsForm;
 import IMS.demo.service.GoodsService;
 import lombok.extern.slf4j.Slf4j;
@@ -45,7 +44,7 @@ public class GoodsController {
     public ResultVO<Map<String,String>> create(@Valid GoodsForm goodsForm, BindingResult bindingResult){
 
         if (bindingResult.hasErrors()){
-            throw  new SellException(ResultEnum.PARAM_ERROR.getCode(),
+            throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         GoodsDTO goodsDTO = GoodsForm2DTOConverter.convert(goodsForm);
@@ -59,7 +58,7 @@ public class GoodsController {
     public ResultVO<Map<String,String>> modify(@Valid GoodsForm goodsForm, BindingResult bindingResult){
 
         if (bindingResult.hasErrors()){
-            throw  new SellException(ResultEnum.PARAM_ERROR.getCode(),
+            throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         GoodsDTO goodsDTO = GoodsForm2DTOConverter.convert(goodsForm);

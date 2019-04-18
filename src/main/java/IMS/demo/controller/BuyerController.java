@@ -3,7 +3,7 @@ package IMS.demo.controller;
 import IMS.demo.converter.BuyerForm2DTOConverter;
 import IMS.demo.dto.BuyerDTO;
 import IMS.demo.enums.ResultEnum;
-import IMS.demo.exceptions.SellException;
+import IMS.demo.exceptions.CommonException;
 import IMS.demo.form.BuyerForm;
 import IMS.demo.service.BuyerService;
 import IMS.demo.utils.ResultVOUtil;
@@ -12,7 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,7 +42,7 @@ public class BuyerController {
     public ResultVO<Map<String,String>> create(@Valid BuyerForm buyerForm, BindingResult bindingResult){
 
         if (bindingResult.hasErrors()){
-            throw  new SellException(ResultEnum.PARAM_ERROR.getCode(),
+            throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         BuyerDTO buyerDTO = BuyerForm2DTOConverter.convert(buyerForm);
@@ -57,7 +56,7 @@ public class BuyerController {
     public ResultVO<Map<String,String>> modify(@Valid BuyerForm buyerForm, BindingResult bindingResult){
 
         if (bindingResult.hasErrors()){
-            throw  new SellException(ResultEnum.PARAM_ERROR.getCode(),
+            throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         BuyerDTO buyerDTO = BuyerForm2DTOConverter.convert(buyerForm);

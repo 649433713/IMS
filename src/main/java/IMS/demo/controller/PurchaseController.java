@@ -1,13 +1,10 @@
 package IMS.demo.controller;
 
-import IMS.demo.converter.OrderForm2OrderDTOConverter;
 import IMS.demo.converter.PurchaseForm2DTOConverter;
-import IMS.demo.dto.BuyerDTO;
 import IMS.demo.dto.PurchaseDTO;
 import IMS.demo.enums.ResultEnum;
-import IMS.demo.exceptions.SellException;
+import IMS.demo.exceptions.CommonException;
 import IMS.demo.form.PurchaseForm;
-import IMS.demo.service.BuyerService;
 import IMS.demo.service.PurchaseService;
 import IMS.demo.utils.ResultVOUtil;
 import IMS.demo.vo.ResultVO;
@@ -33,7 +30,7 @@ public class PurchaseController {
     public ResultVO<Map<String,String>> create(@Valid PurchaseForm purchaseForm, BindingResult bindingResult){
 
         if (bindingResult.hasErrors()){
-            throw  new SellException(ResultEnum.PARAM_ERROR.getCode(),
+            throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         PurchaseDTO purchaseDTO = PurchaseForm2DTOConverter.convert(purchaseForm);
