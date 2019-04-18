@@ -13,6 +13,7 @@ public class MemberForm2DTOConverter {
         memberDTO.setNote(memberForm.getNote());
         memberDTO.setBalance(memberForm.getBalance());
         memberDTO.setTel(memberForm.getTel());
+        memberDTO.setEmail(memberForm.getEmail());
         return memberDTO;
     }
 }

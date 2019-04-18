@@ -16,6 +16,8 @@ public class GoodsDTO {
     private double weight;
     private String note;
     private double price;
+    private String placeOfOrigin;
+    private Integer bestBeforeDate;
 
     public GoodsDTO(ProductInfoPO productInfoPO) {
 
@@ -28,6 +30,8 @@ public class GoodsDTO {
         weight = productInfoPO.getProductWeight()/1000.0;
         note = productInfoPO.getProductDescription();
         price = productInfoPO.getProductPrice().doubleValue();
+        placeOfOrigin=productInfoPO.getPlaceOfOrigin();
+        bestBeforeDate=productInfoPO.getBestBeforeDate();
     }
 
     public GoodsDTO() {
@@ -45,6 +49,8 @@ public class GoodsDTO {
         productInfoPO.setProductWeight((int)weight*1000);
         productInfoPO.setProductDescription(note);
         productInfoPO.setProductPrice(new BigDecimal(price));
+        productInfoPO.setPlaceOfOrigin(placeOfOrigin);
+        productInfoPO.setBestBeforeDate(bestBeforeDate);
         return productInfoPO;
     }
 

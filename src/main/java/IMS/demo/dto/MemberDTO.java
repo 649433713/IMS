@@ -10,6 +10,7 @@ public class MemberDTO {
     private String tel;
     private String note;
     private double balance;
+    private String email;
 
     public MemberDTO() {
 
@@ -21,6 +22,7 @@ public class MemberDTO {
         tel = customerPO.getContact();
         note = customerPO.getComments();
         balance= customerPO.getBalance();
+        email=customerPO.getEmail();
     }
 
     public CustomerPO getPO() {
@@ -30,6 +32,7 @@ public class MemberDTO {
         customerPO.setCustomerName(memberName);
         customerPO.setContact(tel);
         customerPO.setComments(note);
+        customerPO.setEmail(email);
         return customerPO;
     }
 }

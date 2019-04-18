@@ -23,6 +23,8 @@ public class GoodsForm {
     private String note ;
     @NotNull(message = "价格必填")
     private double price;
+    private String placeOfOrigin;
+    private Integer bestBeforeDate;
 
     public String getSize() {
         return size;
