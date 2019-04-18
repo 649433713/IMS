@@ -32,6 +32,8 @@ public class ProductInfoPO {
     private int category;
     private Timestamp createTime;
     private Timestamp updateTime;
+    private String placeOfOrigin;
+    private Integer bestBeforeDate;
 
     @Id
     @Column(name = "product_id", nullable = false, length = 32)
@@ -242,5 +244,25 @@ public class ProductInfoPO {
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
         result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "place_of_origin", nullable = true, length = 45)
+    public String getPlaceOfOrigin() {
+        return placeOfOrigin;
+    }
+
+    public void setPlaceOfOrigin(String placeOfOrigin) {
+        this.placeOfOrigin = placeOfOrigin;
+    }
+
+    @Basic
+    @Column(name = "best_before_date", nullable = true)
+    public Integer getBestBeforeDate() {
+        return bestBeforeDate;
+    }
+
+    public void setBestBeforeDate(Integer bestBeforeDate) {
+        this.bestBeforeDate = bestBeforeDate;
     }
 }

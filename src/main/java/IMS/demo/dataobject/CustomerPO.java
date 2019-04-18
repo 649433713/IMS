@@ -20,7 +20,7 @@ public class CustomerPO {
     private Double balance;
     private String contact;
     private String comments;
-    private String invoiceInfo;
+    private String email;
 
     @Id
     @Column(name = "card_no", nullable = false, length = 45)
@@ -83,13 +83,13 @@ public class CustomerPO {
     }
 
     @Basic
-    @Column(name = "invoice_info", nullable = true, length = 512)
-    public String getInvoiceInfo() {
-        return invoiceInfo;
+    @Column(name = "email", nullable = true, length = 512)
+    public String getEmail() {
+        return email;
     }
 
-    public void setInvoiceInfo(String invoiceInfo) {
-        this.invoiceInfo = invoiceInfo;
+    public void setEmail(String invoiceInfo) {
+        this.email = invoiceInfo;
     }
 
     @Override
@@ -105,7 +105,7 @@ public class CustomerPO {
         if (balance != null ? !balance.equals(that.balance) : that.balance != null) return false;
         if (contact != null ? !contact.equals(that.contact) : that.contact != null) return false;
         if (comments != null ? !comments.equals(that.comments) : that.comments != null) return false;
-        if (invoiceInfo != null ? !invoiceInfo.equals(that.invoiceInfo) : that.invoiceInfo != null) return false;
+        if (email != null ? !email.equals(that.email) : that.email != null) return false;
 
         return true;
     }
@@ -118,7 +118,7 @@ public class CustomerPO {
         result = 31 * result + (balance != null ? balance.hashCode() : 0);
         result = 31 * result + (contact != null ? contact.hashCode() : 0);
         result = 31 * result + (comments != null ? comments.hashCode() : 0);
-        result = 31 * result + (invoiceInfo != null ? invoiceInfo.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
     }
 }

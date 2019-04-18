@@ -21,6 +21,9 @@ public class BuyerInfoPO {
     private String comments;
     private Timestamp createTime;
     private Timestamp updateTime;
+    private String productionCategory;
+    private String legalPerson;
+    private String email;
 
     @Id
     @Column(name = "id", nullable = false, length = 32)
@@ -53,7 +56,7 @@ public class BuyerInfoPO {
     }
 
     @Basic
-    @Column(name = "comments", nullable = false, length = 64)
+    @Column(name = "comments", nullable = true, length = 64)
     public String getComments() {
         return comments;
     }
@@ -108,5 +111,35 @@ public class BuyerInfoPO {
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
         result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "production_category", nullable = true, length = 45)
+    public String getProductionCategory() {
+        return productionCategory;
+    }
+
+    public void setProductionCategory(String productionCategory) {
+        this.productionCategory = productionCategory;
+    }
+
+    @Basic
+    @Column(name = "legal_person", nullable = true, length = 45)
+    public String getLegalPerson() {
+        return legalPerson;
+    }
+
+    public void setLegalPerson(String legalPerson) {
+        this.legalPerson = legalPerson;
+    }
+
+    @Basic
+    @Column(name = "email", nullable = true, length = 45)
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
