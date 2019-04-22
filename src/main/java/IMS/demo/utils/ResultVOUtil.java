@@ -3,8 +3,8 @@ package IMS.demo.utils;
 import IMS.demo.vo.ResultVO;
 
 /**
- * @author IMS
- * Created on 2017/10/14
+ * @author yinywf
+ * Created on 2019/04/12
  */
 public class ResultVOUtil {
 

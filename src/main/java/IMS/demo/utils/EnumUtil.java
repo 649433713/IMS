@@ -3,8 +3,8 @@ package IMS.demo.utils;
 import IMS.demo.enums.CodeEnum;
 
 /**
- * @author IMS
- * Created on 2017/10/20
+ * @author yinywf
+ * Created on 2019/04/12
  */
 public class EnumUtil {
 

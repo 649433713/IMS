@@ -2,10 +2,9 @@ package IMS.demo.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 /**
- * Created by 廖师兄
- * 2017-07-04 01:30
+ * @author yinywf
+ * Created on 2019/04/12
  */
 public class JsonUtil {
 

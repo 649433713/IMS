@@ -1,10 +1,5 @@
 package IMS.demo.utils.excelUtil;
 
-import IMS.demo.dataobject.BuyerInfoPO;
-
-import java.io.File;
-import java.io.FileInputStream;
-
 /**
  * @author yinywf
  * Created on 2019/4/18
@@ -51,15 +46,5 @@ public class ExcelHead {
 
     public ExcelHead(){}
 
-    public static void main(String[] args) {
-        FileInputStream fileInputStream = null;
-        try {
-            fileInputStream = new FileInputStream(new File("./ExcelTest.xlsx"));
-            System.out.println(ExcelUtil.readExcelToEntity(BuyerInfoPO.class, fileInputStream, "ExcelTest.xlsx"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
 }
 

@@ -6,8 +6,8 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 /**
- * @author IMS
- * Created on 2017/10/31
+ * @author yinywf
+ * Created on 2019/04/12
  */
 @Component
 @Slf4j
