@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import IMS.demo.config.ProjectUrlConfig;
-import IMS.demo.exceptions.SellException;
+import IMS.demo.exceptions.CommonException;
 import IMS.demo.exceptions.SellerAuthorizeException;
 import IMS.demo.utils.ResultVOUtil;
 import IMS.demo.vo.ResultVO;
@@ -40,9 +40,9 @@ public class ExceptionHandle {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public ResultVO handle(Exception e){
-        if (e instanceof SellException){
-            SellException sellException=(SellException)e;
-            return ResultVOUtil.error(sellException.getCode(), sellException.getMessage());
+        if (e instanceof CommonException){
+            CommonException commonException =(CommonException)e;
+            return ResultVOUtil.error(commonException.getCode(), commonException.getMessage());
         }else {
             log.error("[系统异常] {}",e);
             return ResultVOUtil.error(-1,"未知错误");

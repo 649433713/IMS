@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import IMS.demo.converter.OrderForm2OrderDTOConverter;
 import IMS.demo.dto.OrderDTO;
 import IMS.demo.enums.ResultEnum;
-import IMS.demo.exceptions.SellException;
+import IMS.demo.exceptions.CommonException;
 import IMS.demo.form.OrderForm;
 import IMS.demo.service.OrderService;
 import IMS.demo.utils.ResultVOUtil;
@@ -38,14 +38,14 @@ public class BuyerOrderController {
     public ResultVO<Map<String,String>> create(@Valid OrderForm orderForm, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             log.error("【创建订单】 参数不正确,orderForm={}",orderForm);
-            throw  new SellException(ResultEnum.PARAM_ERROR.getCode(),
+            throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
 
         OrderDTO orderDTO = OrderForm2OrderDTOConverter.convert(orderForm);
         if (orderDTO.getOrderDetailPOList().isEmpty()){
             log.error("【创建订单】 购物车不能为空");
-            throw new SellException(ResultEnum.CART_EMPTY);
+            throw new CommonException(ResultEnum.CART_EMPTY);
         }
         OrderDTO createResult = orderService.create(orderDTO);
 
@@ -63,7 +63,7 @@ public class BuyerOrderController {
 
         if (openid.isEmpty()){
             log.error("【查询订单列表】 openID为空");
-            throw new SellException(ResultEnum.PARAM_ERROR);
+            throw new CommonException(ResultEnum.PARAM_ERROR);
         }
         PageRequest request = new PageRequest(page,size);
         Page<OrderDTO> orderDTOPage = orderService.findList(openid,request);

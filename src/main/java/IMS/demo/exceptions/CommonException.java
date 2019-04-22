@@ -8,17 +8,23 @@ import IMS.demo.enums.ResultEnum;
  * Created on 2019/04/12
  */
 @Getter
-public class SellException extends RuntimeException{
+public class CommonException extends RuntimeException{
 
     private Integer code;
 
-    public SellException(ResultEnum resultEnum){
+    public CommonException(ResultEnum resultEnum){
         super(resultEnum.getMessage());
 
         this.code = resultEnum.getCode();
     }
 
-    public SellException(Integer code, String defaultMessage) {
+    public CommonException(String message){
+        super(message);
+
+        this.code = ResultEnum.PARAM_ERROR.getCode();
+    }
+
+    public CommonException(Integer code, String defaultMessage) {
         super(defaultMessage);
         this.code = code;
     }

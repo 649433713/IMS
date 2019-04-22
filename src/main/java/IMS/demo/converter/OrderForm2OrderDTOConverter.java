@@ -6,7 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import lombok.extern.slf4j.Slf4j;
 import IMS.demo.dto.OrderDTO;
 import IMS.demo.enums.ResultEnum;
-import IMS.demo.exceptions.SellException;
+import IMS.demo.exceptions.CommonException;
 import IMS.demo.form.OrderForm;
 
 import java.util.List;
@@ -34,7 +34,7 @@ public class OrderForm2OrderDTOConverter {
 
         }catch (Exception e){
             log.error("【对象转换】错误，string={}",orderForm.getItems());
-            throw new SellException(ResultEnum.PARAM_ERROR);
+            throw new CommonException(ResultEnum.PARAM_ERROR);
         }
 
         orderDTO.setOrderDetailPOList(orderDetailList);

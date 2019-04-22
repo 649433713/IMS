@@ -3,7 +3,7 @@ package IMS.demo.controller;
 import IMS.demo.converter.SaleForm2DTOConverter;
 import IMS.demo.dto.*;
 import IMS.demo.enums.ResultEnum;
-import IMS.demo.exceptions.SellException;
+import IMS.demo.exceptions.CommonException;
 import IMS.demo.form.SaleForm;
 import IMS.demo.service.SalesService;
 import IMS.demo.utils.ResultVOUtil;
@@ -47,7 +47,7 @@ public class SaleController {
     public ResultVO<Map<String,String>> create(@Valid SaleForm saleForm, BindingResult bindingResult){
 
         if (bindingResult.hasErrors()){
-            throw  new SellException(ResultEnum.PARAM_ERROR.getCode(),
+            throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         SaleDTO saleDTO = SaleForm2DTOConverter.convert(saleForm);
