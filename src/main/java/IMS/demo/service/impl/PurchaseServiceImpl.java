@@ -3,7 +3,7 @@ package IMS.demo.service.impl;
 import IMS.demo.dataobject.StockPurchaseMasterPO;
 import IMS.demo.dataobject.StockPurchasePO;
 import IMS.demo.dto.PurchaseDTO;
-import IMS.demo.dto.TradeGoodsDTO;
+import IMS.demo.dto.PurchaseGoodsDTO;
 import IMS.demo.repository.StockPurchaseMasterRepository;
 import IMS.demo.repository.StockPurchaseRepository;
 import IMS.demo.service.PurchaseService;
@@ -37,8 +37,8 @@ public class PurchaseServiceImpl implements PurchaseService {
         StockPurchaseMasterPO masterPO = new StockPurchaseMasterPO();
         masterPO.setComments(purchaseDTO.getNote());
         int masterId = stockPurchaseMasterRepository.save(masterPO).getId();
-        List<TradeGoodsDTO> tradeGoodsDTOS = purchaseDTO.getGoodsList();
-        List<StockPurchasePO> stockPurchasePOS = tradeGoodsDTOS.stream().map(tradeGoodsDTO -> {
+        List<PurchaseGoodsDTO> purchaseGoodsDTOS = purchaseDTO.getGoodsList();
+        List<StockPurchasePO> stockPurchasePOS = purchaseGoodsDTOS.stream().map(tradeGoodsDTO -> {
             StockPurchasePO stockPurchasePO = tradeGoodsDTO.getPO();
             stockPurchasePO.setMasterId(masterId);
             return stockPurchasePO;
@@ -58,8 +58,8 @@ public class PurchaseServiceImpl implements PurchaseService {
             purchaseDTO.setPurchaseId(String.valueOf(stockPurchaseMasterPO.getId()));
 
             List<StockPurchasePO> stockPurchasePOS = stockPurchaseRepository.findByMasterId(stockPurchaseMasterPO.getId());
-            List<TradeGoodsDTO> tradeGoodsDTOS = stockPurchasePOS.stream().map(TradeGoodsDTO::new).collect(Collectors.toList());
-            purchaseDTO.setGoodsList(tradeGoodsDTOS);
+            List<PurchaseGoodsDTO> purchaseGoodsDTOS = stockPurchasePOS.stream().map(PurchaseGoodsDTO::new).collect(Collectors.toList());
+            purchaseDTO.setGoodsList(purchaseGoodsDTOS);
             return purchaseDTO;
         });
 

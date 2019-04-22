@@ -1,11 +1,10 @@
 package IMS.demo.converter;
 
-import IMS.demo.dto.PurchaseDTO;
 import IMS.demo.dto.SaleDTO;
-import IMS.demo.dto.TradeGoodsDTO;
+import IMS.demo.dto.PurchaseGoodsDTO;
+import IMS.demo.dto.SaleGoodsDTO;
 import IMS.demo.enums.ResultEnum;
 import IMS.demo.exceptions.SellException;
-import IMS.demo.form.PurchaseForm;
 import IMS.demo.form.SaleForm;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,15 +21,15 @@ public class SaleForm2DTOConverter {
         saleDTO.setNote(saleForm.getNote());
         saleDTO.setSalesId(saleForm.getSaleId());
         saleDTO.setStatus(saleForm.getStatus());
-        List<TradeGoodsDTO> tradeGoodsDTOList;
+        List<SaleGoodsDTO> saleGoodsDTOList;
         Gson gson = new Gson();
         try {
-            tradeGoodsDTOList = gson.fromJson(saleForm.getGoodsList(),new TypeToken<List<TradeGoodsDTO>>(){}.getType());
+            saleGoodsDTOList = gson.fromJson(saleForm.getGoodsList(),new TypeToken<List<SaleGoodsDTO>>(){}.getType());
 
         }catch (Exception e){
             throw new SellException(ResultEnum.PARAM_ERROR);
         }
-        saleDTO.setGoodsList(tradeGoodsDTOList);
+        saleDTO.setGoodsList(saleGoodsDTOList);
         return  saleDTO;
     }
 
