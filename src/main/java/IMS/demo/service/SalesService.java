@@ -10,11 +10,12 @@ import java.util.List;
 public interface SalesService {
 
     /**创建销售订单*/
+    //TODO
     SaleDTO sales(SaleDTO SaleDTO);
-
+    //TODO
     /**查询进货列表*/
     Page<SaleDTO> findSalesList(Pageable pageable);
-
+    //TODO
     /**查询销售详情*/
     List<PurchaseGoodsDTO> findSaleDetail(String saleID);
 }
