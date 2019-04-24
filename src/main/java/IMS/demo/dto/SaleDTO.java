@@ -12,5 +12,5 @@ public class SaleDTO {
     private String buyer;
     private LocalDateTime createTime;
 
-    List<TradeGoodsDTO> goodsList;
+    List<SaleGoodsDTO> goodsList;
 }

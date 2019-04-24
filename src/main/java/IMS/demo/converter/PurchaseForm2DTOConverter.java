@@ -1,7 +1,7 @@
 package IMS.demo.converter;
 
 import IMS.demo.dto.PurchaseDTO;
-import IMS.demo.dto.TradeGoodsDTO;
+import IMS.demo.dto.PurchaseGoodsDTO;
 import IMS.demo.enums.ResultEnum;
 import IMS.demo.exceptions.CommonException;
 import IMS.demo.form.PurchaseForm;
@@ -18,15 +18,15 @@ public class PurchaseForm2DTOConverter {
         purchaseDTO.setNote(purchaseForm.getNote());
         purchaseDTO.setPurchaseId(purchaseForm.getPurchaseId());
 
-        List<TradeGoodsDTO> tradeGoodsDTOList;
+        List<PurchaseGoodsDTO> purchaseGoodsDTOList;
         Gson gson = new Gson();
         try {
-            tradeGoodsDTOList = gson.fromJson(purchaseForm.getGoodsList(),new TypeToken<List<TradeGoodsDTO>>(){}.getType());
+            purchaseGoodsDTOList = gson.fromJson(purchaseForm.getGoodsList(),new TypeToken<List<PurchaseGoodsDTO>>(){}.getType());
 
         }catch (Exception e){
             throw new CommonException(ResultEnum.PARAM_ERROR);
         }
-        purchaseDTO.setGoodsList(tradeGoodsDTOList);
+        purchaseDTO.setGoodsList(purchaseGoodsDTOList);
         return  purchaseDTO;
     }
 }

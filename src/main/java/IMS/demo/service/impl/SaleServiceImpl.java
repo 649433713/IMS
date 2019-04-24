@@ -1,7 +1,7 @@
 package IMS.demo.service.impl;
 
 import IMS.demo.dto.SaleDTO;
-import IMS.demo.dto.TradeGoodsDTO;
+import IMS.demo.dto.PurchaseGoodsDTO;
 import IMS.demo.service.SalesService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -30,7 +30,7 @@ public class SaleServiceImpl implements SalesService {
     }
 
     @Override
-    public List<TradeGoodsDTO> findSaleDetail(String saleID) {
+    public List<PurchaseGoodsDTO> findSaleDetail(String saleID) {
         return null;
     }
 }
