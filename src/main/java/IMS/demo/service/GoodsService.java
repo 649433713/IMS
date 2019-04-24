@@ -28,4 +28,6 @@ public interface GoodsService {
     /**获取所有商品种类*/
     List<String> findAllCategory();
 
+
+
 }
