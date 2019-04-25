@@ -1,7 +1,7 @@
 package IMS.demo.service;
 
 import IMS.demo.dto.SaleDTO;
-import IMS.demo.dto.PurchaseGoodsDTO;
+import IMS.demo.dto.SaleGoodsDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -16,5 +16,5 @@ public interface SalesService {
     Page<SaleDTO> findSalesList(Pageable pageable);
 
     /**查询销售详情*/
-    List<PurchaseGoodsDTO> findSaleDetail(String saleID);
+    List<SaleGoodsDTO> findSaleDetail(String saleID);
 }

@@ -33,7 +33,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public MemberDTO create(MemberDTO memberDTO) {
-        CustomerPO savePo = memberDTO.getPO();
+        CustomerPO savePo = memberDTO.transferPO();
 
         return new MemberDTO(customerRepository.save(savePo));
     }
@@ -41,7 +41,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public MemberDTO modify(MemberDTO memberDTO) {
 
-        return new MemberDTO(customerRepository.save(memberDTO.getPO()));
+        return new MemberDTO(customerRepository.save(memberDTO.transferPO()));
     }
 
     @Override

@@ -38,7 +38,7 @@ public class GoodsDTO {
 
     }
 
-    public ProductInfoPO getPo() {
+    public ProductInfoPO transferPO() {
         ProductInfoPO productInfoPO = new ProductInfoPO();
         productInfoPO.setProductModel(category);
         productInfoPO.setProductId(goodsId);

@@ -44,14 +44,14 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public GoodsDTO create(GoodsDTO goodsDTO) {
-        ProductInfoPO savePo = goodsDTO.getPo();
+        ProductInfoPO savePo = goodsDTO.transferPO();
         savePo.setProductId(KeyUtil.getUniqueKey());
         return new GoodsDTO(productInfoRepository.save(savePo));
     }
 
     @Override
     public GoodsDTO modify(GoodsDTO goodsDTO) {
-        ProductInfoPO productInfoPO = productInfoRepository.save(goodsDTO.getPo());
+        ProductInfoPO productInfoPO = productInfoRepository.save(goodsDTO.transferPO());
         return new GoodsDTO(productInfoPO);
     }
 

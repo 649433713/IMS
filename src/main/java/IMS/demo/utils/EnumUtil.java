@@ -19,4 +19,15 @@ public class EnumUtil {
         return null;
 
     }
+
+    public static <T extends CodeEnum> T getByMessage(String message, Class<T> enumClass) {
+        for (T each : enumClass.getEnumConstants()) {
+            if (message.equals(each.getMessage())) {
+                return each;
+            }
+        }
+
+        return null;
+
+    }
 }

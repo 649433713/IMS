@@ -84,4 +84,11 @@ public class ProductCategoryPO {
         result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
         return result;
     }
+
+    public ProductCategoryPO() {
+
+    }
+    public ProductCategoryPO(String categoryName) {
+        this.categoryName = categoryName;
+    }
 }
