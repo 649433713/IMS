@@ -29,7 +29,7 @@ public class BuyerDTO {
 
     }
 
-    public BuyerInfoPO getPO() {
+    public BuyerInfoPO transferPO() {
         BuyerInfoPO buyerInfoPO = new BuyerInfoPO();
         buyerInfoPO.setComments(note);
         buyerInfoPO.setContact(contact);

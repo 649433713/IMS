@@ -34,7 +34,7 @@ public class BuyerServiceImpl implements BuyerService {
 
     @Override
     public BuyerDTO create(BuyerDTO buyerDTO) {
-        BuyerInfoPO savePo = buyerDTO.getPO();
+        BuyerInfoPO savePo = buyerDTO.transferPO();
         savePo.setId(KeyUtil.getUniqueKey());
         BuyerInfoPO buyerInfoPO = buyerInfoRepository.save(savePo);
         return new BuyerDTO(buyerInfoPO);
@@ -42,7 +42,7 @@ public class BuyerServiceImpl implements BuyerService {
 
     @Override
     public BuyerDTO modify(BuyerDTO buyerDTO) {
-        BuyerInfoPO buyerInfoPO = buyerInfoRepository.save(buyerDTO.getPO());
+        BuyerInfoPO buyerInfoPO = buyerInfoRepository.save(buyerDTO.transferPO());
         return new BuyerDTO(buyerInfoPO);
     }
 

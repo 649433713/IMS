@@ -39,7 +39,7 @@ public class PurchaseServiceImpl implements PurchaseService {
         int masterId = stockPurchaseMasterRepository.save(masterPO).getId();
         List<PurchaseGoodsDTO> purchaseGoodsDTOS = purchaseDTO.getGoodsList();
         List<StockPurchasePO> stockPurchasePOS = purchaseGoodsDTOS.stream().map(tradeGoodsDTO -> {
-            StockPurchasePO stockPurchasePO = tradeGoodsDTO.getPO();
+            StockPurchasePO stockPurchasePO = tradeGoodsDTO.transferPO();
             stockPurchasePO.setMasterId(masterId);
             return stockPurchasePO;
         }).collect(Collectors.toList());

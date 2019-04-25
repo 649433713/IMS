@@ -35,7 +35,7 @@ public class PurchaseGoodsDTO {
         note = stockPurchasePO.getComments();
     }
 
-    public StockPurchasePO getPO() {
+    public StockPurchasePO transferPO() {
         StockPurchasePO stockPurchasePO = new StockPurchasePO();
         stockPurchasePO.setAmount(priceSum);
         stockPurchasePO.setComments(note);

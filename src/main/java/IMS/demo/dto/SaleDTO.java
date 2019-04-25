@@ -30,7 +30,7 @@ public class SaleDTO {
         goodsList = orderDetailPOS == null ? null : orderDetailPOS.stream().map(SaleGoodsDTO::new).collect(Collectors.toList());
     }
 
-    public OrderMasterPO getMasterPO() {
+    public OrderMasterPO transferMasterPO() {
         OrderMasterPO orderMasterPO = new OrderMasterPO();
         orderMasterPO.setOrderId(salesId == null ? KeyUtil.getUniqueKey() : salesId);
         orderMasterPO.setOrderAbstract(note);
@@ -39,8 +39,8 @@ public class SaleDTO {
         return orderMasterPO;
     }
 
-    public List<OrderDetailPO> getDetailPOs() {
-        return goodsList.stream().map(SaleGoodsDTO::getPO).collect(Collectors.toList());
+    public List<OrderDetailPO> transferDetailPOs() {
+        return goodsList.stream().map(SaleGoodsDTO::transferPO).collect(Collectors.toList());
     }
 
 }

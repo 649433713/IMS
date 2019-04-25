@@ -23,7 +23,7 @@ public class SaleGoodsDTO {
         icon = orderDetailPO.getProductIcon();
     }
 
-    public OrderDetailPO getPO() {
+    public OrderDetailPO transferPO() {
         OrderDetailPO orderDetailPO = new OrderDetailPO();
         orderDetailPO.setProductId(goodsId);
         orderDetailPO.setProductName(name);

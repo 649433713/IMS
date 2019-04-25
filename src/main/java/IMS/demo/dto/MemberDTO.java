@@ -25,7 +25,7 @@ public class MemberDTO {
         email=customerPO.getEmail();
     }
 
-    public CustomerPO getPO() {
+    public CustomerPO transferPO() {
         CustomerPO customerPO = new CustomerPO();
         customerPO.setBalance(balance);
         customerPO.setCardNo(memberId);

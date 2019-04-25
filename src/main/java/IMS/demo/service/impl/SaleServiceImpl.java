@@ -34,8 +34,8 @@ public class SaleServiceImpl implements SalesService {
 
     @Override
     public SaleDTO sales(SaleDTO SaleDTO) {
-        OrderMasterPO masterPO = SaleDTO.getMasterPO();
-        List<OrderDetailPO> orderDetailPOS = SaleDTO.getDetailPOs();
+        OrderMasterPO masterPO = SaleDTO.transferMasterPO();
+        List<OrderDetailPO> orderDetailPOS = SaleDTO.transferDetailPOs();
 
         orderMasterRepository.save(masterPO);
         orderDetailRepository.save(orderDetailPOS);
