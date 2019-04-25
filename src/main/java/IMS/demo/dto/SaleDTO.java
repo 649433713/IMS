@@ -43,4 +43,8 @@ public class SaleDTO {
         return goodsList.stream().map(SaleGoodsDTO::transferPO).collect(Collectors.toList());
     }
 
+    public SaleDTO() {
+
+    }
+
 }

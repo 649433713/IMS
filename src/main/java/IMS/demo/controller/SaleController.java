@@ -37,9 +37,9 @@ public class SaleController {
     }
     //详情
     @GetMapping("/detail")
-    public ResultVO<List<PurchaseGoodsDTO>> detail(@RequestParam("saleID") String saleID) {
+    public ResultVO<List<SaleGoodsDTO>> detail(@RequestParam("saleID") String saleID) {
 
-        List<PurchaseGoodsDTO> saleDetail= salesService.findSaleDetail(saleID);
+        List<SaleGoodsDTO> saleDetail= salesService.findSaleDetail(saleID);
         return ResultVOUtil.success(saleDetail);
     }
     //创建
