@@ -19,9 +19,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author IMS
+ * @author yinywf
  * 登录校验
- * Created on 2017/10/26
+ * Created on 2019/4/26
  */
 @Aspect
 @Component
