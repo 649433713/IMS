@@ -31,6 +31,9 @@ public class BuyerInfoPO {
     private String productionCategory;
     private String legalPerson;
     private String email;
+    private Byte gender;
+    private String purchaseCategory;
+    private String duty;
 
     @Id
     @Column(name = "id", nullable = false, length = 32)
@@ -93,7 +96,7 @@ public class BuyerInfoPO {
     }
 
     @Basic
-    @Column(name = "contact_person", nullable = false)
+    @Column(name = "contact_person", nullable = true, length = 45)
     public String getContactPerson() {
         return contactPerson;
     }
@@ -153,5 +156,35 @@ public class BuyerInfoPO {
     public int hashCode() {
 
         return Objects.hash(id, name, contact, contactPerson, comments, createTime, updateTime, productionCategory, legalPerson, email);
+    }
+
+    @Basic
+    @Column(name = "gender", nullable = true)
+    public Byte getGender() {
+        return gender;
+    }
+
+    public void setGender(Byte gender) {
+        this.gender = gender;
+    }
+
+    @Basic
+    @Column(name = "purchase_category", nullable = true, length = 45)
+    public String getPurchaseCategory() {
+        return purchaseCategory;
+    }
+
+    public void setPurchaseCategory(String purchaseCategory) {
+        this.purchaseCategory = purchaseCategory;
+    }
+
+    @Basic
+    @Column(name = "duty", nullable = true, length = 45)
+    public String getDuty() {
+        return duty;
+    }
+
+    public void setDuty(String duty) {
+        this.duty = duty;
     }
 }

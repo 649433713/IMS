@@ -25,6 +25,12 @@ public class OrderDetailPO {
     private String productIcon;
     private Timestamp createTime;
     private Timestamp updateTime;
+    private BigDecimal purchasePrice;
+    private BigDecimal retailPrice;
+    private Double discount;
+    private String transportation;
+    private String payment;
+    private Byte state;
 
     @Id
     @Column(name = "detail_id", nullable = false, length = 32)
@@ -148,5 +154,65 @@ public class OrderDetailPO {
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
         result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "purchase_price", nullable = true, precision = 2)
+    public BigDecimal getPurchasePrice() {
+        return purchasePrice;
+    }
+
+    public void setPurchasePrice(BigDecimal purchasePrice) {
+        this.purchasePrice = purchasePrice;
+    }
+
+    @Basic
+    @Column(name = "retail_price", nullable = true, precision = 2)
+    public BigDecimal getRetailPrice() {
+        return retailPrice;
+    }
+
+    public void setRetailPrice(BigDecimal retailPrice) {
+        this.retailPrice = retailPrice;
+    }
+
+    @Basic
+    @Column(name = "discount", nullable = true, precision = 0)
+    public Double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Double discount) {
+        this.discount = discount;
+    }
+
+    @Basic
+    @Column(name = "transportation", nullable = true, length = 45)
+    public String getTransportation() {
+        return transportation;
+    }
+
+    public void setTransportation(String transportation) {
+        this.transportation = transportation;
+    }
+
+    @Basic
+    @Column(name = "payment", nullable = true, length = 45)
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
+
+    @Basic
+    @Column(name = "state", nullable = true)
+    public Byte getState() {
+        return state;
+    }
+
+    public void setState(Byte state) {
+        this.state = state;
     }
 }

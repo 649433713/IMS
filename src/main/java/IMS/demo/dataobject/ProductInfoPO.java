@@ -34,6 +34,9 @@ public class ProductInfoPO {
     private Timestamp updateTime;
     private String placeOfOrigin;
     private Integer bestBeforeDate;
+    private String itemNumber;
+    private String material;
+    private String color;
 
     @Id
     @Column(name = "product_id", nullable = false, length = 32)
@@ -264,5 +267,35 @@ public class ProductInfoPO {
 
     public void setBestBeforeDate(Integer bestBeforeDate) {
         this.bestBeforeDate = bestBeforeDate;
+    }
+
+    @Basic
+    @Column(name = "item_number", nullable = true, length = 45)
+    public String getItemNumber() {
+        return itemNumber;
+    }
+
+    public void setItemNumber(String itemNumber) {
+        this.itemNumber = itemNumber;
+    }
+
+    @Basic
+    @Column(name = "material", nullable = true, length = 45)
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    @Basic
+    @Column(name = "color", nullable = true, length = 45)
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

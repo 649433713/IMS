@@ -24,8 +24,10 @@ public class StockPurchasePO {
     private String comments;
     private int masterId;
     private String seller;
+    private Double discount;
+    private String preservation;
 
-    @Id()
+    @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     public int getId() {
@@ -156,5 +158,25 @@ public class StockPurchasePO {
         result = 31 * result + (tax != null ? tax.hashCode() : 0);
         result = 31 * result + (comments != null ? comments.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "discount", nullable = true, precision = 0)
+    public Double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Double discount) {
+        this.discount = discount;
+    }
+
+    @Basic
+    @Column(name = "preservation", nullable = true, length = 512)
+    public String getPreservation() {
+        return preservation;
+    }
+
+    public void setPreservation(String preservation) {
+        this.preservation = preservation;
     }
 }
