@@ -9,15 +9,24 @@ import java.math.BigDecimal;
 public class GoodsDTO {
     private String goodsId;
     private String name;
-    private String category;
-    private String brand;
-    private String size;
-    private String danwei;
-    private double weight;
+
+    private String category;//种类
+    private String brand;//品牌
+    private String size;//规格
+    private String danwei;//单位
+    private double weight;//重量
     private String note;
     private double price;
-    private String placeOfOrigin;
+    private String placeOfOrigin;//产地
     private Integer bestBeforeDate;
+
+    private String shortName;//简名
+    private String color;
+    private String articleNumber;//货号
+    private String material;//材料
+    private String model;//型号
+
+
 
     public GoodsDTO(ProductInfoPO productInfoPO) {
 

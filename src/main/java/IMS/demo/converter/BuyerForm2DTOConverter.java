@@ -16,6 +16,10 @@ public class BuyerForm2DTOConverter {
         buyerDTO.setEmail(buyForm.getEmail());
         buyerDTO.setLegalPerson(buyForm.getLegalPerson());
         buyerDTO.setProductionCategory(buyForm.getProductionCategory());
+
+        buyerDTO.setCareer(buyForm.getCareer());
+        buyerDTO.setBuyCategory(buyForm.getBuyCategory());
+        buyerDTO.setSex(buyForm.getSex());
         return buyerDTO;
 
     }

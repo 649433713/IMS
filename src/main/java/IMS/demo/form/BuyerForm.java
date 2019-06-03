@@ -14,4 +14,8 @@ public class BuyerForm {
     private String email;
     private String contactPerson;
     private String productionCategory;
+
+    private String buyCategory;//
+    private String sex;
+    private String career;
 }

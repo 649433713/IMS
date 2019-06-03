@@ -19,6 +19,12 @@ public class GoodsForm2DTOConverter {
         goodsDTO.setWeight(goodsForm.getWeight());
         goodsDTO.setBestBeforeDate(goodsForm.getBestBeforeDate());
         goodsDTO.setPlaceOfOrigin(goodsForm.getPlaceOfOrigin());
+
+        goodsDTO.setArticleNumber(goodsForm.getArticleNumber());
+        goodsDTO.setColor(goodsForm.getColor());
+        goodsDTO.setShortName(goodsForm.getShortName());
+        goodsDTO.setMaterial(goodsForm.getMaterial());
+        goodsDTO.setModel(goodsForm.getModel());
         return goodsDTO;
     }
 

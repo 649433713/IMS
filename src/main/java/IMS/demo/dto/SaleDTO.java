@@ -19,6 +19,8 @@ public class SaleDTO {
     private String buyer;
     private LocalDateTime createTime;
 
+    private String transport;//运输方式
+
     List<SaleGoodsDTO> goodsList;
 
     public SaleDTO(OrderMasterPO orderMasterPO, List<OrderDetailPO> orderDetailPOS) {

@@ -14,6 +14,10 @@ public class BuyerDTO {
     private String email;
     private String contactPerson;
 
+    private String buyCategory;//采购类别
+    private String sex;//性别
+    private String career;//性别
+
     public BuyerDTO(BuyerInfoPO buyerInfoPO) {
         buyerId = buyerInfoPO.getId();
         buyerName = buyerInfoPO.getName();

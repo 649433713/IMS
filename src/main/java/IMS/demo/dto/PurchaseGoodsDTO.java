@@ -11,9 +11,13 @@ public class PurchaseGoodsDTO {
     private Integer num;
     private double price;
     private double priceSum;
-    private double tax;
+
     private String buyer;
     private String note;
+
+    private boolean tax;
+    private String preservationMatters;//保存事项
+    private double discount;//折扣
 
     public PurchaseGoodsDTO(OrderDetailPO orderDetailPO, OrderMasterPO orderMasterPO) {
         goodsId = orderDetailPO.getProductId();

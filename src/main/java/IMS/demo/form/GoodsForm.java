@@ -10,6 +10,9 @@ public class GoodsForm {
     private String goodsId;
     @NotEmpty(message = "姓名必填")
     private String name;
+
+    private String shortName;
+
     @NotEmpty(message = "类别必填")
     private String category;
     @NotEmpty(message = "品牌必填")
@@ -26,39 +29,12 @@ public class GoodsForm {
     private String placeOfOrigin;
     private Integer bestBeforeDate;
 
-    public String getSize() {
-        return size;
-    }
+    private String color;
+    private String articleNumber;
+    @NotNull(message = "材料必填")
+    private String material;//材料
+    @NotNull(message = "型号必填")
+    private String model;
 
-    public String getNote() {
-        return note;
-    }
 
-    public String getGoodsId() {
-        return goodsId;
-    }
-
-    public String getDanwei() {
-        return danwei;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
 }

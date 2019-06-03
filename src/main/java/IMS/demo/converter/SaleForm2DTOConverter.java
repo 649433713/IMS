@@ -20,6 +20,8 @@ public class SaleForm2DTOConverter {
         saleDTO.setNote(saleForm.getNote());
         saleDTO.setSalesId(saleForm.getSaleId());
         saleDTO.setStatus(saleForm.getStatus());
+
+        saleDTO.setTransport(saleForm.getTransport());
         List<SaleGoodsDTO> saleGoodsDTOList;
         Gson gson = new Gson();
         try {
