@@ -29,7 +29,7 @@ public class ProductInfoPO {
     private String productDescription;
     private String productIcon;
     private Byte productStatus;
-    private int category;
+    private String category;
     private Timestamp createTime;
     private Timestamp updateTime;
     private String placeOfOrigin;
@@ -170,11 +170,11 @@ public class ProductInfoPO {
 
     @Basic
     @Column(name = "category", nullable = false)
-    public int getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(int category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -243,7 +243,7 @@ public class ProductInfoPO {
         result = 31 * result + (productDescription != null ? productDescription.hashCode() : 0);
         result = 31 * result + (productIcon != null ? productIcon.hashCode() : 0);
         result = 31 * result + (productStatus != null ? productStatus.hashCode() : 0);
-        result = 31 * result + category;
+        result = 31 * result + (category != null ? category.hashCode() : 0);
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
         result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
         return result;

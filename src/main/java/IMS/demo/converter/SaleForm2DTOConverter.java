@@ -1,3 +1,4 @@
+/*
 package IMS.demo.converter;
 
 import IMS.demo.dto.SaleDTO;
@@ -15,9 +16,9 @@ import java.util.List;
 public class SaleForm2DTOConverter {
     public static SaleDTO convert(SaleForm saleForm) {
         SaleDTO saleDTO=new SaleDTO();
-        saleDTO.setBuyer(saleForm.getBuyer());
+        saleDTO.setBuyerName(saleForm.getBuyer());
         saleDTO.setCreateTime(saleForm.getCreateTime());
-        saleDTO.setNote(saleForm.getNote());
+        saleDTO.set(saleForm.getNote());
         saleDTO.setSalesId(saleForm.getSaleId());
         saleDTO.setStatus(saleForm.getStatus());
 
@@ -35,3 +36,4 @@ public class SaleForm2DTOConverter {
     }
 
 }
+*/

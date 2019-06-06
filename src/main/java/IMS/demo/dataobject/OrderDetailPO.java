@@ -5,7 +5,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 /**
  * @author yinywf
@@ -23,8 +23,8 @@ public class OrderDetailPO {
     private BigDecimal productPrice;
     private int productQuantity;
     private String productIcon;
-    private Timestamp createTime;
-    private Timestamp updateTime;
+    private LocalDateTime createTime;
+    private LocalDateTime updateTime;
     private BigDecimal purchasePrice;
     private BigDecimal retailPrice;
     private Double discount;
@@ -104,21 +104,21 @@ public class OrderDetailPO {
 
     @Basic
     @Column(name = "create_time", nullable = false)
-    public Timestamp getCreateTime() {
+    public LocalDateTime getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Timestamp createTime) {
+    public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
 
     @Basic
     @Column(name = "update_time", nullable = false)
-    public Timestamp getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Timestamp updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 

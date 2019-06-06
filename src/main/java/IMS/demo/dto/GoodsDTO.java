@@ -32,15 +32,20 @@ public class GoodsDTO {
 
         goodsId = productInfoPO.getProductId();
         name = productInfoPO.getProductName();
-        category = productInfoPO.getProductModel();
+        category = productInfoPO.getCategory();
         brand = productInfoPO.getProductBrand();
         size = productInfoPO.getProductSize();
         danwei = productInfoPO.getProductUnit();
         weight = productInfoPO.getProductWeight()/1000.0;
         note = productInfoPO.getProductDescription();
         price = productInfoPO.getProductPrice().doubleValue();
-        placeOfOrigin=productInfoPO.getPlaceOfOrigin();
-        bestBeforeDate=productInfoPO.getBestBeforeDate();
+        placeOfOrigin = productInfoPO.getPlaceOfOrigin();
+        bestBeforeDate = productInfoPO.getBestBeforeDate();
+        shortName = productInfoPO.getNameAbbr();
+        color = productInfoPO.getColor();
+        articleNumber = productInfoPO.getItemNumber();
+        material = productInfoPO.getMaterial();
+        model = productInfoPO.getProductModel();
     }
 
     public GoodsDTO() {

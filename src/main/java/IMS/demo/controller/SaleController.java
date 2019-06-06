@@ -1,10 +1,11 @@
 package IMS.demo.controller;
 
-import IMS.demo.converter.SaleForm2DTOConverter;
-import IMS.demo.dto.*;
+import IMS.demo.dto.SaleDTO;
+import IMS.demo.dto.SaleGoodsDTO;
 import IMS.demo.enums.ResultEnum;
 import IMS.demo.exceptions.CommonException;
-import IMS.demo.form.SaleForm;
+import IMS.demo.repository.OrderDetailRepository;
+import IMS.demo.repository.OrderMasterRepository;
 import IMS.demo.service.SalesService;
 import IMS.demo.utils.ResultVOUtil;
 import IMS.demo.vo.ResultVO;
@@ -15,9 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @Slf4j
@@ -25,6 +24,13 @@ import java.util.Map;
 public class SaleController {
     @Autowired
     SalesService salesService;
+
+    @Autowired
+    private OrderMasterRepository orderMasterRepository;
+
+    @Autowired
+    private OrderDetailRepository orderDetailRepository;
+
     //列表
     @GetMapping("/")
     public ResultVO<List<SaleDTO>> list(@RequestParam(value = "cursor",defaultValue = "0") Integer cursor,
@@ -44,16 +50,15 @@ public class SaleController {
     }
     //创建
     @PostMapping("/add")
-    public ResultVO<Map<String,String>> create(@Valid SaleForm saleForm, BindingResult bindingResult){
+    public ResultVO<SaleDTO> create(@RequestBody SaleDTO saleDTO, BindingResult bindingResult){
 
         if (bindingResult.hasErrors()){
             throw  new CommonException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
-        SaleDTO saleDTO = SaleForm2DTOConverter.convert(saleForm);
         SaleDTO createResult = salesService.sales(saleDTO);
 
-        return ResultVOUtil.success();
+        return ResultVOUtil.success(createResult);
     }
 
 }

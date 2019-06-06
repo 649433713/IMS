@@ -6,43 +6,45 @@ import IMS.demo.enums.OrderStatusEnum;
 import IMS.demo.utils.EnumUtil;
 import IMS.demo.utils.KeyUtil;
 import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Data
 public class SaleDTO {
-    private String salesId;
-    private String note;
-    private String status;
-    private String buyer;
+    private String orderId;
+    private String buyerName;
+    private String buyerContact;
+    private BigDecimal orderAmount;
+    private String orderStatus;
     private LocalDateTime createTime;
+    private LocalDateTime updateTime;
+    private String orderAbstract;
 
-    private String transport;//运输方式
-
-    List<SaleGoodsDTO> goodsList;
+    List<OrderDetailPO> goodsList;
 
     public SaleDTO(OrderMasterPO orderMasterPO, List<OrderDetailPO> orderDetailPOS) {
-        salesId = orderMasterPO.getOrderId();
-        note = orderMasterPO.getOrderAbstract();
-        status = EnumUtil.getByCode((int) orderMasterPO.getOrderStatus(),OrderStatusEnum.class).getMessage();
-        buyer = orderMasterPO.getBuyerName();
+
+        BeanUtils.copyProperties(orderMasterPO,this);
+        orderStatus = EnumUtil.getByCode((int) orderMasterPO.getOrderStatus(),OrderStatusEnum.class).getMessage();
+        updateTime = orderMasterPO.getUpdateTime().toLocalDateTime();
         createTime = orderMasterPO.getCreateTime().toLocalDateTime();
-        goodsList = orderDetailPOS == null ? null : orderDetailPOS.stream().map(SaleGoodsDTO::new).collect(Collectors.toList());
+        goodsList = orderDetailPOS;
+
     }
 
     public OrderMasterPO transferMasterPO() {
         OrderMasterPO orderMasterPO = new OrderMasterPO();
-        orderMasterPO.setOrderId(salesId == null ? KeyUtil.getUniqueKey() : salesId);
-        orderMasterPO.setOrderAbstract(note);
-        orderMasterPO.setOrderStatus(EnumUtil.getByMessage(status,OrderStatusEnum.class).getCode().byteValue());
-        orderMasterPO.setBuyerName(buyer);
+        orderMasterPO.setOrderId(orderId == null ? KeyUtil.getUniqueKey() : orderId);
+        orderMasterPO.setOrderStatus(EnumUtil.getByMessage(orderStatus,OrderStatusEnum.class).getCode().byteValue());
+        BeanUtils.copyProperties(this, orderMasterPO);
         return orderMasterPO;
     }
 
     public List<OrderDetailPO> transferDetailPOs() {
-        return goodsList.stream().map(SaleGoodsDTO::transferPO).collect(Collectors.toList());
+        return goodsList;
     }
 
     public SaleDTO() {

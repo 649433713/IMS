@@ -20,7 +20,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="OpenJPA" />
         <datasource-mapping>
-          <factory-entry name="entityManagerFactory" value="d228a18e-fca6-4029-82a5-51c7ac608bb9" />
+          <factory-entry name="entityManagerFactory" value="1f32c608-e56d-436d-873a-adcb10f27ea3" />
           <factory-entry name="noname-a.xml@0" value="d228a18e-fca6-4029-82a5-51c7ac608bb9" />
         </datasource-mapping>
       </configuration>

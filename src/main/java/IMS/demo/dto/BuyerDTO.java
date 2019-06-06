@@ -1,6 +1,7 @@
 package IMS.demo.dto;
 
 import IMS.demo.dataobject.BuyerInfoPO;
+import IMS.demo.enums.GenderEnum;
 import lombok.Data;
 
 @Data
@@ -27,6 +28,9 @@ public class BuyerDTO {
         legalPerson=buyerInfoPO.getLegalPerson();
         email=buyerInfoPO.getEmail();
         contactPerson=buyerInfoPO.getContactPerson();
+        buyCategory = buyerInfoPO.getPurchaseCategory();
+        sex = GenderEnum.valueOf(buyerInfoPO.getGender());
+        career = buyerInfoPO.getDuty();
     }
 
     public BuyerDTO() {
@@ -43,6 +47,8 @@ public class BuyerDTO {
         buyerInfoPO.setEmail(email);
         buyerInfoPO.setProductionCategory(productionCategory);
         buyerInfoPO.setLegalPerson(legalPerson);
+        buyerInfoPO.setGender(GenderEnum.valueOf(sex).getCode().byteValue());
+        buyerInfoPO.setDuty(career);
 
         return buyerInfoPO;
     }

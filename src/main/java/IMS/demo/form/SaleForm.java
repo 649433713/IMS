@@ -15,5 +15,4 @@ public class SaleForm {
     @NotEmpty(message = "进货商品不能为空")
     private String goodsList;
 
-    private String transport;//运输方式
 }

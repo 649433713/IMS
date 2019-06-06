@@ -46,9 +46,7 @@ public class SaleServiceImpl implements SalesService {
     public Page<SaleDTO> findSalesList(Pageable pageable) {
         Page<OrderMasterPO> orderMasterPOS = orderMasterRepository.findAll(pageable);
 
-        return orderMasterPOS.map(orderMasterPO -> {
-            return new SaleDTO(orderMasterPO, null);
-        });
+        return orderMasterPOS.map(orderMasterPO -> new SaleDTO(orderMasterPO, orderDetailRepository.findByOrderId(orderMasterPO.getOrderId())));
     }
 
     @Override
