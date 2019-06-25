@@ -1,0 +1,455 @@
+2019-06-25 07:52:34,288 - Starting IMSApplicationTests on ca549923e2bf with PID 9336 (started by root in /usr/src/app)
+2019-06-25 07:52:34,290 - No active profile set, falling back to default profiles: default
+2019-06-25 07:52:34,699 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 07:52:34 GMT 2019]; root of context hierarchy
+2019-06-25 07:52:35,030 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-25 07:52:36,129 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 07:52:36,322 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 07:52:36,403 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-25 07:52:36,404 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-25 07:52:36,406 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-25 07:52:36,407 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-25 07:52:36,409 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-25 07:52:36,411 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-25 07:52:36,412 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-25 07:52:36,415 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-25 07:52:36,418 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-25 07:52:36,419 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-25 07:52:40,058 - Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:339)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:366)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:139)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$bf2b411c.CGLIB$jpaVendorAdapter$6(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$bf2b411c$$FastClassBySpringCGLIB$$355d6881.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$bf2b411c.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:326)
+	... 86 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 87 common frames omitted
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54)
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93)
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133)
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149)
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83)
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596)
+	... 101 common frames omitted
+Caused by: java.net.SocketException: Network unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202)
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57)
+	... 104 common frames omitted
+2019-06-25 07:52:40,186 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-25 07:52:40,228 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-25 07:52:40,375 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-25 07:52:40,378 - HHH000206: hibernate.properties not found
+2019-06-25 07:52:40,381 - HHH000021: Bytecode provider name : javassist
+2019-06-25 07:52:40,459 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-25 07:52:43,645 - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2019-06-25 07:52:43,650 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2019-06-25 07:52:43,663 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-06-25 07:46:58,159 - Starting IMSApplicationTests on 245b331cc318 with PID 9336 (started by root in /usr/src/app)
+2019-06-25 07:46:58,161 - No active profile set, falling back to default profiles: default
+2019-06-25 07:46:58,516 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 07:46:58 GMT 2019]; root of context hierarchy
+2019-06-25 07:46:58,700 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-25 07:46:59,622 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 07:46:59,764 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 07:46:59,821 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-25 07:46:59,823 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-25 07:46:59,824 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-25 07:46:59,825 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-25 07:46:59,826 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-25 07:46:59,826 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-25 07:46:59,827 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-25 07:46:59,829 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-25 07:46:59,830 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-25 07:46:59,832 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-25 07:47:12,947 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-25 07:47:12,977 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-25 07:47:13,070 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-25 07:47:13,072 - HHH000206: hibernate.properties not found
+2019-06-25 07:47:13,075 - HHH000021: Bytecode provider name : javassist
+2019-06-25 07:47:13,138 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-25 07:47:13,258 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-25 07:47:13,938 - HHH000228: Running hbm2ddl schema update
+2019-06-25 07:47:52,286 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 07:47:52,754 - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-25 07:47:54,281 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 07:46:58 GMT 2019]; root of context hierarchy
+2019-06-25 07:47:54,374 - Mapped "{[/buyer/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.modify(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,377 - Mapped "{[/buyer/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.BuyerDTO>> IMS.demo.controller.BuyerController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 07:47:54,378 - Mapped "{[/buyer/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.create(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,381 - Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public IMS.demo.vo.ResultVO IMS.demo.controller.BuyerOrderController.cancel(java.lang.String,java.lang.String)
+2019-06-25 07:47:54,381 - Mapped "{[/buyer/order/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.OrderDTO> IMS.demo.controller.BuyerOrderController.detail(java.lang.String,java.lang.String)
+2019-06-25 07:47:54,382 - Mapped "{[/buyer/order/list],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.OrderDTO>> IMS.demo.controller.BuyerOrderController.list(java.lang.String,java.lang.Integer,java.lang.Integer)
+2019-06-25 07:47:54,382 - Mapped "{[/buyer/order/create],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerOrderController.create(IMS.demo.form.OrderForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,384 - Mapped "{[/goods/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.modify(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,385 - Mapped "{[/goods/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.GoodsDTO>> IMS.demo.controller.GoodsController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 07:47:54,386 - Mapped "{[/goods/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.create(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,386 - Mapped "{[/index]}" onto public java.lang.String IMS.demo.controller.IndexController.index()
+2019-06-25 07:47:54,388 - Mapped "{[/member/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.modify(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,389 - Mapped "{[/member/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.MemberDTO>> IMS.demo.controller.MemberController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 07:47:54,389 - Mapped "{[/member/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.create(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,391 - Mapped "{[/purchase/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.PurchaseController.create(IMS.demo.form.PurchaseForm,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,395 - Mapped "{[/sale/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleGoodsDTO>> IMS.demo.controller.SaleController.detail(java.lang.String)
+2019-06-25 07:47:54,397 - Mapped "{[/sale/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleDTO>> IMS.demo.controller.SaleController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 07:47:54,398 - Mapped "{[/sale/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.SaleDTO> IMS.demo.controller.SaleController.create(IMS.demo.dto.SaleDTO,org.springframework.validation.BindingResult)
+2019-06-25 07:47:54,401 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-25 07:47:54,401 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-25 07:47:54,474 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 07:47:54,474 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 07:47:54,502 - Detected @ExceptionHandler methods in exceptionHandle
+2019-06-25 07:47:54,540 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 07:47:55,703 - Started IMSApplicationTests in 58.063 seconds (JVM running for 58.881)
+2019-06-25 07:47:55,769 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 07:46:58 GMT 2019]; root of context hierarchy
+2019-06-25 07:47:55,791 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 13:30:57,858 - Starting IMSApplicationTests on 3caee8c38bc3 with PID 9336 (started by root in /usr/src/app)
+2019-06-25 13:30:57,860 - No active profile set, falling back to default profiles: default
+2019-06-25 13:30:58,175 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 13:30:58 GMT 2019]; root of context hierarchy
+2019-06-25 13:30:58,452 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-25 13:30:59,266 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 13:30:59,426 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 13:30:59,482 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-25 13:30:59,483 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-25 13:30:59,484 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-25 13:30:59,484 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-25 13:30:59,485 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-25 13:30:59,486 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-25 13:30:59,487 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-25 13:30:59,489 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-25 13:30:59,490 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-25 13:30:59,491 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-25 13:31:08,843 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-25 13:31:08,877 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-25 13:31:08,979 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-25 13:31:08,981 - HHH000206: hibernate.properties not found
+2019-06-25 13:31:08,983 - HHH000021: Bytecode provider name : javassist
+2019-06-25 13:31:09,046 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-25 13:31:09,195 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-25 13:31:09,808 - HHH000228: Running hbm2ddl schema update
+2019-06-25 13:31:33,182 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 13:31:33,646 - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-25 13:31:35,413 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 13:30:58 GMT 2019]; root of context hierarchy
+2019-06-25 13:31:35,526 - Mapped "{[/buyer/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.modify(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,527 - Mapped "{[/buyer/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.BuyerDTO>> IMS.demo.controller.BuyerController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:31:35,528 - Mapped "{[/buyer/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.create(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,530 - Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public IMS.demo.vo.ResultVO IMS.demo.controller.BuyerOrderController.cancel(java.lang.String,java.lang.String)
+2019-06-25 13:31:35,530 - Mapped "{[/buyer/order/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.OrderDTO> IMS.demo.controller.BuyerOrderController.detail(java.lang.String,java.lang.String)
+2019-06-25 13:31:35,531 - Mapped "{[/buyer/order/list],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.OrderDTO>> IMS.demo.controller.BuyerOrderController.list(java.lang.String,java.lang.Integer,java.lang.Integer)
+2019-06-25 13:31:35,531 - Mapped "{[/buyer/order/create],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerOrderController.create(IMS.demo.form.OrderForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,533 - Mapped "{[/goods/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.modify(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,533 - Mapped "{[/goods/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.GoodsDTO>> IMS.demo.controller.GoodsController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:31:35,533 - Mapped "{[/goods/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.create(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,534 - Mapped "{[/index]}" onto public java.lang.String IMS.demo.controller.IndexController.index()
+2019-06-25 13:31:35,536 - Mapped "{[/member/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.modify(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,536 - Mapped "{[/member/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.MemberDTO>> IMS.demo.controller.MemberController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:31:35,536 - Mapped "{[/member/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.create(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,537 - Mapped "{[/purchase/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.PurchaseController.create(IMS.demo.form.PurchaseForm,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,539 - Mapped "{[/sale/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleGoodsDTO>> IMS.demo.controller.SaleController.detail(java.lang.String)
+2019-06-25 13:31:35,539 - Mapped "{[/sale/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleDTO>> IMS.demo.controller.SaleController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:31:35,540 - Mapped "{[/sale/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.SaleDTO> IMS.demo.controller.SaleController.create(IMS.demo.dto.SaleDTO,org.springframework.validation.BindingResult)
+2019-06-25 13:31:35,542 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-25 13:31:35,542 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-25 13:31:35,596 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 13:31:35,596 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 13:31:35,621 - Detected @ExceptionHandler methods in exceptionHandle
+2019-06-25 13:31:35,654 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 13:31:36,710 - Started IMSApplicationTests in 39.35 seconds (JVM running for 40.518)
+2019-06-25 13:31:36,778 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 13:30:58 GMT 2019]; root of context hierarchy
+2019-06-25 13:31:36,801 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 13:55:26,239 - Starting IMSApplicationTests on 986eb3d41ebf with PID 9361 (started by root in /usr/src/app)
+2019-06-25 13:55:26,241 - No active profile set, falling back to default profiles: default
+2019-06-25 13:55:26,930 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 13:55:26 GMT 2019]; root of context hierarchy
+2019-06-25 13:55:27,381 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-25 13:55:29,095 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 13:55:29,329 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 13:55:29,425 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-25 13:55:29,428 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-25 13:55:29,431 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-25 13:55:29,435 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-25 13:55:29,436 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-25 13:55:29,437 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-25 13:55:29,438 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-25 13:55:29,444 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-25 13:55:29,445 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-25 13:55:29,448 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-25 13:55:39,188 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-25 13:55:39,237 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-25 13:55:39,433 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-25 13:55:39,437 - HHH000206: hibernate.properties not found
+2019-06-25 13:55:39,441 - HHH000021: Bytecode provider name : javassist
+2019-06-25 13:55:39,544 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-25 13:55:39,804 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-25 13:55:41,128 - HHH000228: Running hbm2ddl schema update
+2019-06-25 13:56:02,053 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 13:56:02,959 - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-25 13:56:06,488 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 13:55:26 GMT 2019]; root of context hierarchy
+2019-06-25 13:56:06,798 - Mapped "{[/buyer/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.modify(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,800 - Mapped "{[/buyer/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.BuyerDTO>> IMS.demo.controller.BuyerController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:56:06,801 - Mapped "{[/buyer/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.create(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,806 - Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public IMS.demo.vo.ResultVO IMS.demo.controller.BuyerOrderController.cancel(java.lang.String,java.lang.String)
+2019-06-25 13:56:06,807 - Mapped "{[/buyer/order/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.OrderDTO> IMS.demo.controller.BuyerOrderController.detail(java.lang.String,java.lang.String)
+2019-06-25 13:56:06,809 - Mapped "{[/buyer/order/list],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.OrderDTO>> IMS.demo.controller.BuyerOrderController.list(java.lang.String,java.lang.Integer,java.lang.Integer)
+2019-06-25 13:56:06,811 - Mapped "{[/buyer/order/create],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerOrderController.create(IMS.demo.form.OrderForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,814 - Mapped "{[/goods/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.modify(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,815 - Mapped "{[/goods/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.GoodsDTO>> IMS.demo.controller.GoodsController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:56:06,818 - Mapped "{[/goods/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.create(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,822 - Mapped "{[/index]}" onto public java.lang.String IMS.demo.controller.IndexController.index()
+2019-06-25 13:56:06,825 - Mapped "{[/member/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.modify(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,828 - Mapped "{[/member/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.MemberDTO>> IMS.demo.controller.MemberController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:56:06,828 - Mapped "{[/member/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.create(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,831 - Mapped "{[/purchase/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.PurchaseController.create(IMS.demo.form.PurchaseForm,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,836 - Mapped "{[/sale/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleGoodsDTO>> IMS.demo.controller.SaleController.detail(java.lang.String)
+2019-06-25 13:56:06,837 - Mapped "{[/sale/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleDTO>> IMS.demo.controller.SaleController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 13:56:06,840 - Mapped "{[/sale/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.SaleDTO> IMS.demo.controller.SaleController.create(IMS.demo.dto.SaleDTO,org.springframework.validation.BindingResult)
+2019-06-25 13:56:06,846 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-25 13:56:06,847 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-25 13:56:06,971 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 13:56:06,971 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 13:56:07,027 - Detected @ExceptionHandler methods in exceptionHandle
+2019-06-25 13:56:07,097 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 13:56:09,064 - Started IMSApplicationTests in 43.776 seconds (JVM running for 45.352)
+2019-06-25 13:56:09,215 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 13:55:26 GMT 2019]; root of context hierarchy
+2019-06-25 13:56:09,266 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 14:10:49,765 - Starting IMSApplicationTests on 27dacb2342e9 with PID 9361 (started by root in /usr/src/app)
+2019-06-25 14:10:49,766 - No active profile set, falling back to default profiles: default
+2019-06-25 14:10:50,353 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 14:10:50 GMT 2019]; root of context hierarchy
+2019-06-25 14:10:50,893 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-25 14:10:52,605 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 14:10:52,911 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 14:10:53,032 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-25 14:10:53,036 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-25 14:10:53,039 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-25 14:10:53,041 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-25 14:10:53,048 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-25 14:10:53,049 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-25 14:10:53,051 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-25 14:10:53,054 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-25 14:10:53,060 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-25 14:10:53,063 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-25 14:12:07,279 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-25 14:12:07,345 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-25 14:12:07,645 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-25 14:12:07,648 - HHH000206: hibernate.properties not found
+2019-06-25 14:12:07,651 - HHH000021: Bytecode provider name : javassist
+2019-06-25 14:12:07,752 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-25 14:12:07,994 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-25 14:12:09,382 - HHH000228: Running hbm2ddl schema update
+2019-06-25 14:12:31,032 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 14:12:32,008 - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-25 14:12:35,063 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 14:10:50 GMT 2019]; root of context hierarchy
+2019-06-25 14:12:35,261 - Mapped "{[/buyer/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.modify(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,265 - Mapped "{[/buyer/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.BuyerDTO>> IMS.demo.controller.BuyerController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:12:35,267 - Mapped "{[/buyer/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.create(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,272 - Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public IMS.demo.vo.ResultVO IMS.demo.controller.BuyerOrderController.cancel(java.lang.String,java.lang.String)
+2019-06-25 14:12:35,274 - Mapped "{[/buyer/order/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.OrderDTO> IMS.demo.controller.BuyerOrderController.detail(java.lang.String,java.lang.String)
+2019-06-25 14:12:35,277 - Mapped "{[/buyer/order/list],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.OrderDTO>> IMS.demo.controller.BuyerOrderController.list(java.lang.String,java.lang.Integer,java.lang.Integer)
+2019-06-25 14:12:35,282 - Mapped "{[/buyer/order/create],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerOrderController.create(IMS.demo.form.OrderForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,287 - Mapped "{[/goods/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.modify(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,288 - Mapped "{[/goods/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.GoodsDTO>> IMS.demo.controller.GoodsController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:12:35,289 - Mapped "{[/goods/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.create(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,290 - Mapped "{[/index]}" onto public java.lang.String IMS.demo.controller.IndexController.index()
+2019-06-25 14:12:35,296 - Mapped "{[/member/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.modify(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,297 - Mapped "{[/member/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.MemberDTO>> IMS.demo.controller.MemberController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:12:35,298 - Mapped "{[/member/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.create(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,303 - Mapped "{[/purchase/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.PurchaseController.create(IMS.demo.form.PurchaseForm,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,308 - Mapped "{[/sale/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleGoodsDTO>> IMS.demo.controller.SaleController.detail(java.lang.String)
+2019-06-25 14:12:35,309 - Mapped "{[/sale/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleDTO>> IMS.demo.controller.SaleController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:12:35,310 - Mapped "{[/sale/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.SaleDTO> IMS.demo.controller.SaleController.create(IMS.demo.dto.SaleDTO,org.springframework.validation.BindingResult)
+2019-06-25 14:12:35,318 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-25 14:12:35,319 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-25 14:12:35,441 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 14:12:35,441 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 14:12:35,499 - Detected @ExceptionHandler methods in exceptionHandle
+2019-06-25 14:12:35,619 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 14:12:37,397 - Started IMSApplicationTests in 108.502 seconds (JVM running for 110.053)
+2019-06-25 14:12:37,526 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 14:10:50 GMT 2019]; root of context hierarchy
+2019-06-25 14:12:37,558 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 14:18:45,225 - Starting IMSApplicationTests on f7b8146d206b with PID 9361 (started by root in /usr/src/app)
+2019-06-25 14:18:45,226 - No active profile set, falling back to default profiles: default
+2019-06-25 14:18:45,678 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 14:18:45 GMT 2019]; root of context hierarchy
+2019-06-25 14:18:46,019 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-25 14:18:47,255 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 14:18:47,441 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-25 14:18:47,529 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-25 14:18:47,531 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-25 14:18:47,533 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-25 14:18:47,535 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-25 14:18:47,536 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-25 14:18:47,537 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-25 14:18:47,538 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-25 14:18:47,541 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-25 14:18:47,542 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-25 14:18:47,543 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-25 14:18:55,907 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-25 14:18:55,939 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-25 14:18:56,027 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-25 14:18:56,029 - HHH000206: hibernate.properties not found
+2019-06-25 14:18:56,031 - HHH000021: Bytecode provider name : javassist
+2019-06-25 14:18:56,082 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-25 14:18:56,202 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-25 14:18:56,850 - HHH000228: Running hbm2ddl schema update
+2019-06-25 14:19:17,522 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-25 14:19:18,010 - HHH000397: Using ASTQueryTranslatorFactory
+2019-06-25 14:19:19,490 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 14:18:45 GMT 2019]; root of context hierarchy
+2019-06-25 14:19:19,620 - Mapped "{[/buyer/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.modify(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,621 - Mapped "{[/buyer/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.BuyerDTO>> IMS.demo.controller.BuyerController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:19:19,622 - Mapped "{[/buyer/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerController.create(IMS.demo.form.BuyerForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,624 - Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public IMS.demo.vo.ResultVO IMS.demo.controller.BuyerOrderController.cancel(java.lang.String,java.lang.String)
+2019-06-25 14:19:19,625 - Mapped "{[/buyer/order/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.OrderDTO> IMS.demo.controller.BuyerOrderController.detail(java.lang.String,java.lang.String)
+2019-06-25 14:19:19,625 - Mapped "{[/buyer/order/list],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.OrderDTO>> IMS.demo.controller.BuyerOrderController.list(java.lang.String,java.lang.Integer,java.lang.Integer)
+2019-06-25 14:19:19,626 - Mapped "{[/buyer/order/create],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.BuyerOrderController.create(IMS.demo.form.OrderForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,627 - Mapped "{[/goods/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.modify(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,628 - Mapped "{[/goods/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.GoodsDTO>> IMS.demo.controller.GoodsController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:19:19,628 - Mapped "{[/goods/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.GoodsController.create(IMS.demo.form.GoodsForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,629 - Mapped "{[/index]}" onto public java.lang.String IMS.demo.controller.IndexController.index()
+2019-06-25 14:19:19,631 - Mapped "{[/member/modify],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.modify(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,631 - Mapped "{[/member/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.MemberDTO>> IMS.demo.controller.MemberController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:19:19,632 - Mapped "{[/member/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.MemberController.create(IMS.demo.form.MemberForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,633 - Mapped "{[/purchase/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> IMS.demo.controller.PurchaseController.create(IMS.demo.form.PurchaseForm,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,637 - Mapped "{[/sale/detail],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleGoodsDTO>> IMS.demo.controller.SaleController.detail(java.lang.String)
+2019-06-25 14:19:19,638 - Mapped "{[/sale/],methods=[GET]}" onto public IMS.demo.vo.ResultVO<java.util.List<IMS.demo.dto.SaleDTO>> IMS.demo.controller.SaleController.list(java.lang.Integer,java.lang.Integer)
+2019-06-25 14:19:19,638 - Mapped "{[/sale/add],methods=[POST]}" onto public IMS.demo.vo.ResultVO<IMS.demo.dto.SaleDTO> IMS.demo.controller.SaleController.create(IMS.demo.dto.SaleDTO,org.springframework.validation.BindingResult)
+2019-06-25 14:19:19,641 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-25 14:19:19,642 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-25 14:19:19,706 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 14:19:19,706 - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 14:19:19,734 - Detected @ExceptionHandler methods in exceptionHandle
+2019-06-25 14:19:19,806 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-25 14:19:20,812 - Started IMSApplicationTests in 36.271 seconds (JVM running for 37.474)
+2019-06-25 14:19:20,875 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6736fa8d: startup date [Tue Jun 25 14:18:45 GMT 2019]; root of context hierarchy
+2019-06-25 14:19:20,884 - Closing JPA EntityManagerFactory for persistence unit 'default'

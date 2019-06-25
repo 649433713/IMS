@@ -1,0 +1,81 @@
+2019-06-06 13:24:04,138 - Starting IMSApplicationTests on 0a5a7cfd0a82 with PID 84 (started by root in /usr/src/mymaven)
+2019-06-06 13:24:04,142 - No active profile set, falling back to default profiles: default
+2019-06-06 13:24:04,437 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3c1e3314: startup date [Thu Jun 06 13:24:04 UTC 2019]; root of context hierarchy
+2019-06-06 13:24:04,893 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-06 13:24:05,817 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 13:24:05,982 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 13:24:06,045 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-06 13:24:06,047 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-06 13:24:06,049 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-06 13:24:06,051 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-06 13:24:06,053 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-06 13:24:06,054 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-06 13:24:06,056 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-06 13:24:06,061 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-06 13:24:06,063 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-06 13:24:06,065 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-06 13:24:11,290 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-06 13:24:11,316 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-06 13:24:11,425 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-06 13:24:11,428 - HHH000206: hibernate.properties not found
+2019-06-06 13:24:11,430 - HHH000021: Bytecode provider name : javassist
+2019-06-06 13:24:11,453 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+2019-06-06 13:24:11,476 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-06-06 13:56:07,416 - Starting IMSApplicationTests on d6ff1eb85020 with PID 136 (started by root in /usr/src/mymaven)
+2019-06-06 13:56:07,419 - No active profile set, falling back to default profiles: default
+2019-06-06 13:56:07,729 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3c1e3314: startup date [Thu Jun 06 13:56:07 UTC 2019]; root of context hierarchy
+2019-06-06 13:56:07,928 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-06 13:56:08,766 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 13:56:08,867 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 13:56:08,916 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-06 13:56:08,918 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-06 13:56:08,919 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-06 13:56:08,920 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-06 13:56:08,921 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-06 13:56:08,922 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-06 13:56:08,923 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-06 13:56:08,925 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-06 13:56:08,927 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-06 13:56:08,928 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-06 13:56:13,632 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-06 13:56:13,653 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-06 13:56:13,730 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-06 13:56:13,731 - HHH000206: hibernate.properties not found
+2019-06-06 13:56:13,733 - HHH000021: Bytecode provider name : javassist
+2019-06-06 13:56:13,750 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+2019-06-06 13:56:13,766 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-06-06 15:32:31,557 - Starting IMSApplicationTests on 8b55935b3a95 with PID 92 (started by root in /usr/src/mymaven)
+2019-06-06 15:32:31,559 - No active profile set, falling back to default profiles: default
+2019-06-06 15:32:31,840 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3c1e3314: startup date [Thu Jun 06 15:32:31 UTC 2019]; root of context hierarchy
+2019-06-06 15:32:32,049 - HV000001: Hibernate Validator 5.3.5.Final
+2019-06-06 15:32:32,730 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 15:32:32,836 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-06 15:32:32,879 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseRepository.
+2019-06-06 15:32:32,880 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderMasterRepository.
+2019-06-06 15:32:32,881 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.OrderDetailRepository.
+2019-06-06 15:32:32,882 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockPurchaseMasterRepository.
+2019-06-06 15:32:32,883 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.CustomerRepository.
+2019-06-06 15:32:32,884 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductCategoryRepository.
+2019-06-06 15:32:32,885 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.ProductInfoRepository.
+2019-06-06 15:32:32,887 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.StockCheckRepository.
+2019-06-06 15:32:32,888 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BrandRepository.
+2019-06-06 15:32:32,889 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface IMS.demo.repository.BuyerInfoRepository.
+2019-06-06 15:32:37,339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-06 15:32:37,355 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-06 15:32:37,433 - HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-06 15:32:37,435 - HHH000206: hibernate.properties not found
+2019-06-06 15:32:37,437 - HHH000021: Bytecode provider name : javassist
+2019-06-06 15:32:37,453 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+2019-06-06 15:32:37,467 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.

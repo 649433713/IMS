@@ -31,9 +31,9 @@ public class GoodsForm {
 
     private String color;
     private String articleNumber;
-    @NotNull(message = "材料必填")
+    // @NotNull(message = "材料必填")
     private String material;//材料
-    @NotNull(message = "型号必填")
+    // @NotNull(message = "型号必填")
     private String model;
 
 
